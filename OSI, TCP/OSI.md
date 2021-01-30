@@ -1,3 +1,2 @@
 # Mô hình OSI
-Mô hình OSI là một trong những công cụ quan trọng nhất để giúp ta nắm bắt cách làm việc của các thiết bị mạng như router, switch, PC ... OSI viêt tắt của từ Open System Interconnection (liên kết nối hệ thống mở)
-![](https://www.google.com/url?sa=i&url=https%3A%2F%2Fvnpro.vn%2Fthu-vien%2Fmo-hinh-osi-tcpip-3093.html&psig=AOvVaw2_0_LfFZLLpqS_0_9-ZAJW&ust=1612066529769000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCJje8oLmwu4CFQAAAAAdAAAAABAD)
+Mô hình OSI là một trong những công cụ quan trọng nhất để giúp ta nắm bắt cách làm việc của các thiết bị mạng như router, switch, PC ... OSI viêt tắt của từ Open System Interconnection (liên kết nối hệ thống mở) ![OSI](https://www.google.com/url?sa=i&url=https%3A%2F%2Fvnpro.vn%2Fthu-vien%2Fmo-hinh-osi-tcpip-3093.html&psig=AOvVaw2_0_LfFZLLpqS_0_9-ZAJW&ust=1612066529769000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCJje8oLmwu4CFQAAAAAdAAAAABAD)
