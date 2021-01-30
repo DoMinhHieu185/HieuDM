@@ -41,3 +41,4 @@ Ví dụ: card Ethernet được hãng sản xuất gán cho một địa chỉ 
 * không dây ( wireless ), có thể là sóng radio (gồm sóng cực ngắn hay chỉ truyền thông qua vệ tinh), bức xạ hồng ngoại
 2. Giao thức (protocol). Ngôn ngữ được sử dụng bởi các thực thể mạng gọi là giao thức truyền thông mạng. Các bên "hiểu nhau" do giao thức định nghĩa 1 ngôn ngữ chung giữa các thành phần mạng. Từ ý nghĩa khái quát này có thể hiểu giao thức truyền thông mạng là các thủ tục, quy tắc hoặc các đặc tả chính thức đã được chấp nhận nhằm xác định hình vi và ngôn ngữ trao đổi giữa các bên. Nói chung trong cuộc sống hàng ngày, chúng ta cũng áp dụng những quy tắc nào đó.
 3. Không có môi trường truyền thì không thể trao đổi giữa các thực thể mạng; không có ngôn ngữ chung, không thể hiểu được nhau. Vì vậy, đường truyền cần cung cấp môi trường để thực truyền thông, trong khi đó ngôn ngữ chung đảm bảo 2 bên truyền thông có thể hiểu được nhau
+
