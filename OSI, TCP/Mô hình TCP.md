@@ -17,5 +17,6 @@
 * giao thức của tầng này bao gồm : IP ( Internet Protocol) , ICMP ( Internet Control Message Protocol) , IGMP ( Internet Group Message Protocol )
 ## Tầng truy cập(Network Access Layer)
 Chịu trách nhiệm truyền dữ liệu giữa các thiết bị trong cùng một mạng. Tại đây các gói dữ liệu được đóng gói khung(frames) và được định tuyến đến đích được chỉ định ban đầu.
-
+# Phương thức hoạt động của bộ giao thức TCP/IP
+![](https://image.prntscr.com/image/NY33dHu-Rx2qRFJjijGLzg.png)
 
