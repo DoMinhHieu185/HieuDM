@@ -19,4 +19,11 @@
 Chịu trách nhiệm truyền dữ liệu giữa các thiết bị trong cùng một mạng. Tại đây các gói dữ liệu được đóng gói khung(frames) và được định tuyến đến đích được chỉ định ban đầu.
 # Phương thức hoạt động của bộ giao thức TCP/IP
 ![](https://image.prntscr.com/image/NY33dHu-Rx2qRFJjijGLzg.png)
+* Cũng tương tự như trong mô hình OSI, khi truyền dữ liệu , quá trình tiến hành từ tầng trên xuống tầng dưới, qua mỗi tầng dữ liệu được them vào thông tin điều khiển gọi là Header. Khi nhận dữ liệu thì quá trình xảy ra ngược lại. dữ liệu được truyền từ tấng dưới lên và qua mỗi tầng thì phần header tương ứng sẽ được lấy đi và khi đến tầng trên cùng thì dữ liệu không còn phần header nữa.
+![](https://image.prntscr.com/image/5-VSttOyQru2vZUfm8rgGQ.png)
+Hình trên cho ta thấy lược đồ dữ liệu qua các tầng.. Trong hình ta thấy tại các tầng khác nhau dữ liệu được mang những thuật ngữ khác nhau 
+* Trong tầng ứng dụng: dữ liệu là các luồng được gọi là stream. 
+* Trong tầng giao vận: đơn vị dữ liệu mà TCP gửi xuống gọi là TCP segment. 
+* Trong tầng mạng, dữ liệu mà IP gửi xuống tầng dưới gọi là IP Datagram 
+* Trong tầng liên kết, dữ liệu được truyền đi gọi là frame.
 
