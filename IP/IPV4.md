@@ -21,4 +21,4 @@ Các quy tắc được áp dụng khi đặt địa chỉ IP:
 - Các bit phần mạng không được phép đặt đồng thời bằng 0 ( Ví dụ: Không hợp lệ nếu đặt địa chỉ 0.0.0.1 với phần mạng 0.0.0 và phần Host là 1).
 - Sẽ có một địa chỉ mạng nếu các bit phần Host đồng thời có giá trị bằng 0 (Ví dụ : Địa chỉ 192.168.1.1 có thể gán cho Host nhưng thay giá trị 0 vào 192.168.1.0 sẽ thành địa chỉ mạng và không thể gán cho Host).
 - Sẽ có địa chỉ Broadcast cho mạng nếu các bit phần Host đồng thời bằng 1 ( Ví dụ: Mạng 192.168.1.0 có địa chỉ 192.168.1.255 là địa chỉ Broadcast).
-!(https://image.prntscr.com/image/fVxsmG0ARJCJsyV9uAI_uw.png "Cấu trúc IP")
+![](https://image.prntscr.com/image/fVxsmG0ARJCJsyV9uAI_uw.png "Cấu trúc IP")
