@@ -1,7 +1,0 @@
-# Địa chỉ IP là gì?
-Địa chỉ IP (IP là viết tắt của từ tiếng Anh: Internet Protocol - giao thức Internet) Địa chỉ IP cung cấp danh tính riêng biệt cho các thiết bị trên mạng dữ liệu IP để chúng có thể tìm thấy nhau trong vô vàn thiết bị trong mạng Mỗi gói tin đi qua mạng TCP/IP đều có một địa chỉ IP xác định thiết bị đã gửi gói tin đó và cũng chứa thông tin đích đến để gói tin có thể được định tuyến thành công đến nơi cần đến.
-## Các loại đại chỉ IP
-Tùy vào mục đích sử dụng mà địa chỉ IP được phân làm: Địa chỉ IP công cộng – IP Public, IP Private – địa chỉ IP riêng, địa chỉ IP tĩnh – Static IP và Dynamic IP – địa chỉ IP động. Chúng có thể được phân là IPv4 hoặc IPv6, cả IP Public và IP Private đều tồn tại dưới dạng IP động hay IP tĩnh.
-1. IP Public là gì?
-IP public là địa chỉ IP công cộng được nhà cung cấp dịch vụ internet chỉ định. Đây là địa chỉ mà mạng gia đình hay doanh nghiệp sử dụng để liên lạc với các thiết bị kết nối internet khác, cho phép các thiết bị trong mạng truy cập web hay liên lạc trực tiếp với máy tính của người dùng khác
-2. IP Private là gì?
