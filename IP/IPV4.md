@@ -75,6 +75,14 @@ Như vậy, với 32 bit, giới hạn của địa chỉ IPv4 là từ 0.0.0.0 
 ## Địa chỉ Broadcast
 * Khi muốn gửi thông điệp đến tất cả các máy trong mạng nội bộ, đó là lúc ta cần sử dụng đến địa chỉ Broadcast. Địa chỉ Broadcast là địa chỉ có toàn bộ các bits phần host-id là 1. Khi gói tin được gửi đến địa chỉ Broadcast, thì nó sẽ được gửi tới tất cả các máy cùng mạng, tức là cùng phần net-id. Vì đại diện cho toàn bộ thiết bị trong mạng nên địa chỉ Broadcast không thể đặt được cho bất kỳ thiết bị nào.
 - Ví dụ: 192.168.1.255/24 là địa chỉ Broadcast của mạng 192.168.1.0/24.
+## Subnetmask là gì?
+* Mỗi địa chỉ IP luôn đi kèm với một Subnet mask, để xác định được phần net-id của địa chỉ đó. Subnet mask cũng là một dải nhị phân dài 32 bits và chia ra 4 bộ 8 bits như địa chỉ IP.
+* Subnet mask được sử dụng để xác định khối địa chỉ IP được cung cấp.
+* Subnet mask bao gồm phần các bits 1 và phần còn lại là các bits 0, subnet mask có bao nhiêu bit 1 thì địa chỉ IP tương ứng sẽ có bấy nhiêu bit phần net-id.
+* Ví dụ: với subnet mask như sau: 11111111 11111111 11111111 00000000 (255.255.255.0) bao gồm 24 bits 1, thì địa chỉ IP mang subnet mask này cũng sẽ có 24 bits phần net-id.
+* Lưu ý, một địa chỉ IP có thể thuộc các mạng khác nhau nếu sử dụng các subnet mask khác nhau. Để xác định địa chỉ IP đó thuộc mạng nào, ta chỉ cần lấy địa chỉ IP AND (bitwise) với subnet mask tương ứng.
+* Ví dụ: 192.168.1.3 AND 255.255.255.0 = 192.168.1.0 vậy địa chỉ 192.168.1.3/24 thuộc mạng 192.168.1.0/24
+* ví dụ: 192.168.48.2 and 255.255.255.248 = 192.168.48.0 vậy địa chỉ 192.168.48.2/21 thuộc mạng 192.168.48.0/21
 
 
 
