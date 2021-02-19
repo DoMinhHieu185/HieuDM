@@ -53,6 +53,7 @@ Như vậy, với 32 bit, giới hạn của địa chỉ IPv4 là từ 0.0.0.0 
 * Một mạng lớp C có 2^8 – 2 Host do phần Host của lớp này dài 8 bit
 
 ![](https://image.prntscr.com/image/1rUHTV-uROiGdj0BwWKA-g.png)
+
 4. Lớp D
 * Lớp D bao gồm các địa chỉ từ 224.0.0.0 đến 239.255.255
 * Lớp D được dùng làm địa chỉ Multicast. VD: 224.0.0.5 dùng cho OSPF hay 224.0.0.9 dùng cho RIPv2
