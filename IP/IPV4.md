@@ -67,10 +67,10 @@ Như vậy, với 32 bit, giới hạn của địa chỉ IPv4 là từ 0.0.0.0 
 * IP Private gọi là IP riêng, nhiều IP Private tao thành dải mạng Private Network. Nhiều người còn gọi lại IP LAN, IP Localhost.
 * Chỉ sử dụng được trong mạng cục bộ, có thể tái sử dụng lại ở mạng cục bộ khác, nhưng trong một mạng thì vẫn phải mang giá trị duy nhất.
 * Với mỗi phân lớp địa chỉ IP, thì có một dải địa chỉ dùng để làm địa chỉ private cho lớp đó:
-- Lớp A: Từ 10.0.0.0 đến 10.255.255.255, subnet mask 255.0.0.0
-- Lớp B: Từ 172.16.0.0 đến 172.31.255.255, subnet mask 255.240.0.0
-- Lớp C: Từ 192.168.0.0 đến 192.168.255.255, subnet mask 255.255.0.0
-*Khi các thiết bị sử dụng địa chỉ IP private trong mạng cục bộ muốn truy cập được Internet – môi trường không sử dụng địa chỉ private, công nghệ NAT (Network Address Translation) được cài đặt trên các thiết bị router(đã được gán 1 địa chỉ IP Public) được sử dụng để chuyển IP private thành IP public và ngược lại, giúp cho các thiết bị trong mạng cục bộ vẫn có thể truy cập được Internet.
+ Lớp A: Từ 10.0.0.0 đến 10.255.255.255, subnet mask 255.0.0.0
+ Lớp B: Từ 172.16.0.0 đến 172.31.255.255, subnet mask 255.240.0.0
+ Lớp C: Từ 192.168.0.0 đến 192.168.255.255, subnet mask 255.255.0.0
+* Khi các thiết bị sử dụng địa chỉ IP private trong mạng cục bộ muốn truy cập được Internet – môi trường không sử dụng địa chỉ private, công nghệ NAT (Network Address Translation) được cài đặt trên các thiết bị router(đã được gán 1 địa chỉ IP Public) được sử dụng để chuyển IP private thành IP public và ngược lại, giúp cho các thiết bị trong mạng cục bộ vẫn có thể truy cập được Internet.
 * IP Private không kết nối được internet.
 ## Địa chỉ Broadcast
 * Khi muốn gửi thông điệp đến tất cả các máy trong mạng nội bộ, đó là lúc ta cần sử dụng đến địa chỉ Broadcast. Địa chỉ Broadcast là địa chỉ có toàn bộ các bits phần host-id là 1. Khi gói tin được gửi đến địa chỉ Broadcast, thì nó sẽ được gửi tới tất cả các máy cùng mạng, tức là cùng phần net-id. Vì đại diện cho toàn bộ thiết bị trong mạng nên địa chỉ Broadcast không thể đặt được cho bất kỳ thiết bị nào.
