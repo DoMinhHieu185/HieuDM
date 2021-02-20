@@ -53,3 +53,6 @@ Ví dụ:
 - 172.16.00011100.0
 * Ta thấy octet thứ ba còn có thêm 3 bit giống nhau.Với nguyên tắc trong số 4 lớp mạng trên có đặc điểm là 19 bit đầu tiên giống nhau và 19 bit này sẽ đóng vai trò là Network ID, 13 bit còn lại ngầm định sẽ đóng vai trò là host-id Vậy ta có mạng tóm tắt là 172.16.0.0/19. Chú ý: subnet mask bây giờ là 255.255.224.0 với prefix là 19. 
 
+## Dạng 4: Chia subnet VLSM
+- VLSM (Variable Length Subnet Mask): là kỹ thuật chia nhỏ một mạng thành các mạng có độ dài khác nhau (sẽ có các subnet mask khác nhau). 
+
