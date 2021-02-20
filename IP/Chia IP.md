@@ -1,4 +1,4 @@
-# Các dạng bài tập chiwa subnet
+# Các dạng bài tập chia subnet
 ## Dạng 1: Cho một mạng lớn và số bit mượn. Xác định 
 - Số subnet 
 - Số host/subnet 
@@ -7,8 +7,8 @@
 - Địa chỉ host cuối của mỗi subnet. 
 - Địa chỉ broadcast của mỗi subnet
 - Subnet mask được sử dụng. 
-** Cách tính **
- Gọi n là số bit mượn và m là số bit host còn lại. Ta có: 
+**Cách tính**
+-Gọi n là số bit mượn và m là số bit host còn lại. Ta có: 
 - Số subnet có thể chia được:
 -  2^n       nếu có hỗ trợ subnet – zero. 
 -  2^n – 2   nếu không hỗ trợ subnet – zero.
@@ -26,7 +26,7 @@
 
 ## Dạng 2: Cho một địa chỉ host. Xác định xem host thuộc mạng nào
  VD1:   Cho địa chỉ host 192.168.1.158/28. Hãy cho biết, host này thuộc về subnet nào? 
- ** cách làm **
+ **cách làm**
 - Bước 1: Ta để ý vào số prefix (ở ví dụ này là 28). 
 - Bước 2: Từ số prefix ta xác định được số bit mạng (= 28)(số bit mạng = số prefix)
 - Bước 3: xác định octet bị chia cắt của địa chỉ host là octet bao nhiêu ( Octet bị chia cắt là octet chưa cả bit mạng lẫn bit host)(Ở ví dụ này octet bị chia cắt là octet thứ 4).
@@ -44,7 +44,7 @@ Ví dụ:
  172.16.20.0.24      
  172.16.24.0/24       
  172.16.28.0/24 
-** Cách làm **
+**Cách làm**
 * Nguyên tắc khi tóm tắt là xem xét các octet từ trái qua phải và bắt đầu phân tích từ octet có sự khác nhau đầu tiên
 * Trong trường hợp của ví dụ trên, octet thứ ba là octet khác nhau đầu tiên. Ta xét chi tiết octet này:
 - 172.16.00010000.0
@@ -54,5 +54,5 @@ Ví dụ:
 * Ta thấy octet thứ ba còn có thêm 3 bit giống nhau.Với nguyên tắc trong số 4 lớp mạng trên có đặc điểm là 19 bit đầu tiên giống nhau và 19 bit này sẽ đóng vai trò là Network ID, 13 bit còn lại ngầm định sẽ đóng vai trò là host-id Vậy ta có mạng tóm tắt là 172.16.0.0/19. Chú ý: subnet mask bây giờ là 255.255.224.0 với prefix là 19. 
 
 ## Dạng 4: Chia subnet VLSM
-- VLSM (Variable Length Subnet Mask): là kỹ thuật chia nhỏ một mạng thành các mạng có độ dài khác nhau (sẽ có các subnet mask khác nhau). 
+- VLSM (Variable Length Subnet Mask): là kỹ thuật chia nhỏ một mạng thành các mạng có độ dài khác nhau (sẽ có các subnet mask khác nhau).
 
