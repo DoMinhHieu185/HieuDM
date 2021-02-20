@@ -7,8 +7,9 @@
 - Địa chỉ host cuối của mỗi subnet. 
 - Địa chỉ broadcast của mỗi subnet
 - Subnet mask được sử dụng. 
+
 **Cách tính**
--Gọi n là số bit mượn và m là số bit host còn lại. Ta có: 
+- Gọi n là số bit mượn và m là số bit host còn lại. Ta có: 
 - Số subnet có thể chia được:
 -  2^n       nếu có hỗ trợ subnet – zero. 
 -  2^n – 2   nếu không hỗ trợ subnet – zero.
