@@ -56,4 +56,15 @@ Ví dụ:
 
 ## Dạng 4: Chia subnet VLSM
 - VLSM (Variable Length Subnet Mask): là kỹ thuật chia nhỏ một mạng thành các mạng có độ dài khác nhau (sẽ có các subnet mask khác nhau).
+ **Cách làm**
+
+- Bước 1:Công việc đầu tiên là bạn xác định xem thứ tự sắp xếp từ lớn đến bé trong những đường mạng cần chia
+- Bước 2: Theo công thức 2^m - 2 >= X (với X là số host cần chia, m là số bit Host ID còn lại).
+- Bước 3: Tìm số bít netid tăng thêm n = 32 - subnetmask hiện tại - m
+- Bước 4: Subnet Mask mới = Subnet Mask cũ + n (là số bit vừa bị mượn)
+- Bước 5: Tìm bước nhảy = 2^m
+- Bước 6:
+Các Subnet ID gồm:
++ Subnet ID đầu tiên = 0
++ Subnet ID kế tiếp = Subnet hiện tại + Bước nhảy
 
