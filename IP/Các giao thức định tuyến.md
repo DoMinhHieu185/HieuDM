@@ -36,3 +36,9 @@ là các giao thức xác định tuyến đường đi từ nguồn tới đíc
 - Topology exchange: Những Router neighbor sẽ trao đổi thông tin lẫn nhau, cập nhật đầy đủ cấu trúc liên kết, topology mạng. Khi topoly mạng thay đổi nó sẽ cập nhật phần thay đổi.
 - Choosing routes: Mỗi Router sẽ tiến hành phân tích bảng EIGRP topology table, chọn ra con đường định tuyến có metric tốt để đến các subnet. Sau khi thực hiện 3 bước ở trên, hệ điều hành IOS sẽ lưu 3 bảng EIGRP Tables quan trọng
   - Bảng láng giềng (Neighbor table): Bảng láng giềng là bảng quan trọng nhất của EIGRP, trong đó có danh sách các router thân mật với nó. Đối với mỗi giao thức mà EIGRP hỗ trợ thì nó sẽ có 1 bảng láng giềng tương ứng. Khi phát hiện một láng giềng mới, router sẽ ghi lại thông tin về địa chỉ, cổng kết nối.
+  - Bảng cấu trúc mạng (Topology table): Là bảng cung cấp dữ liệu để xây dựng nên bảng định tuyến của EIGRP. Thuật toán DUAL sẽ lấy thông tin từ bảng láng giềng và bảng cấu trúc để chọn đường có chi phí thấp nhất cho từng mạch đích. Mỗi EIGRP Router lưu một bảng cấu trúc mạng riêng tương ứng với từng loại giao thức mạng khác nhau. Bảng cấu trúc mạng chứa thông tin về tất cả các con đường mà Router học được. Nhờ những thông tin này mà Router có thể xác định đường đi khác để thay thế nhanh chóng khi cần thiết. Thuật toán DUAL chọn ra đường tốt nhất đến mạng đích gọi là đường kính (successor Router).
+**Những thông tin chứa trong bảng cấu trúc**
+- Feasible Distance (FD): Là thông tin định tuyến nhỏ nhất mà EIGRP tính được cho từng mạch đích
+- Router Sourch: Là nguồn phát khởi thông tin về một nguồn nào đó, phần thông tin này chỉ có đối với những kết nối ngoài mạng EIGRP
+- Reported Distance (RD): Là thông số định tuyến đến 1 Router láng giềng được thông báo qua
+- 
