@@ -92,3 +92,4 @@ Như vậy, với 32 bit, giới hạn của địa chỉ IPv4 là từ 0.0.0.0 
 
 
 
+
