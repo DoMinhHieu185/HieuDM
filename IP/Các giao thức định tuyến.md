@@ -8,6 +8,8 @@ là các giao thức xác định tuyến đường đi từ nguồn tới đíc
 - Truyền thông không tin cậy: Rip sử dụng giao thức udp để chuyển thông điệp Gửi quảng bá broadcast và multicast
 - Thuật toán distance vector : rip sử dung thuật toán distance vector. Các router hàng xóm trao đổi bảng định tuyến cho nhau 30s 1 lần trong các thông điệp rip, mỗi thông điệp chứa tối đa 25 địa chỉ đích tới.
 ### 2. OSPF (Open Shortest Path First)
-
+- Định tuyến nội miền: Cho phép trao đổi thông tin giữa các router trong 1 miền
+ - Trao đổi các thông tin đã được kiểm chứng: Hai router trao đổi thông điệp OSPF với nhau có thể tiến hành thủ tục kiểm tra để xác định mình nhận được thông điệp đúng từ phía bên kia. Điều này ngăn ngừa được tin tặc tiến hành các cuộc tấn công bằng phương pháp gả mạo.
+ 
 
 
