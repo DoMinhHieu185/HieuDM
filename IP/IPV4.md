@@ -87,7 +87,14 @@ Như vậy, với 32 bit, giới hạn của địa chỉ IPv4 là từ 0.0.0.0 
 * Lưu ý, một địa chỉ IP có thể thuộc các mạng khác nhau nếu sử dụng các subnet mask khác nhau. Để xác định địa chỉ IP đó thuộc mạng nào, ta chỉ cần lấy địa chỉ IP AND (bitwise) với subnet mask tương ứng.
 * Ví dụ: 192.168.1.3 AND 255.255.255.0 = 192.168.1.0 vậy địa chỉ 192.168.1.3/24 thuộc mạng 192.168.1.0/24
 * ví dụ: 192.168.48.2 and 255.255.255.248 = 192.168.48.0 vậy địa chỉ 192.168.48.2/21 thuộc mạng 192.168.48.0/21
-
+## Loopback là gì?
+- Loopback là 1 thiết bị mạng ảo tạo kết nối mạng chỉ với 1 điểm cuối, nghĩa là nó bắt đầu và kết thúc tại cùng 1 thiết bị. Đó là máy tính của bạn.
+- Các địa chỉ loopback chủ yếu được sử dụng để khắc phục sự cố hoặc để truy cập tài nguyên cục bộ qua giao tiếp mạng.
+## Default gateway
+- hay được gọi là cổng mặc định của máy tính. Mỗi máy tính sẽ được cài đặt sẵn một cổng mặc định, đại chỉ này có nhiệm vụ nhận các tập tin và chuyển chúng đi đến máy tính khác trong cùng mạng LAN
+- Khi gói tin cần gửi đến địa chỉ không cùng mạng hiện tại, hoặc đơn giản là không biết gửi đi đâu thì gói tin đó sẽ được gửi tới Default gateway, thường là một interface của Router nối trực tiếp với mạng đó. Tại đây router dẽ dùng chức năng định tuyến để chuyển gói tin đi các hướng khác nhau.
+  - Default gateway thường là địa chỉ IP có thể sử dụng đầu tiên của mạng ảo đó.
+  - VD: Default gateway của mạng 192.168.1.0/24 là 192.168.1.1/24 
 
 
 
