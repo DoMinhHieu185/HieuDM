@@ -35,3 +35,5 @@
     - Card NAT chỉ có thể giao tiếp với card mạng ảo VMnet8 trên máy thật
     - Card NAT chỉ có thể giao tiếp với các card NAT trên máy ảo khác 
     - Card NAT không thể giao tiếp với mạng vật lí mà máy tính thật đang kết nối. Tuy nhiên nhờ cơ chế NAT được tích hợp trong VMware, máy tính ảo có thể gián tiếp liên lạc với mạng vật lí bên ngoài.
+    
+  ![](https://image.prntscr.com/image/2rPdqu_5QVCijbgeggvZMQ.png)
