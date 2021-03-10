@@ -8,5 +8,15 @@
 - #reboot
 ## 3.liên kết tập tin
 Bạn muốn tập tin hieu trong đường dẫn /usr/hieu sẽ xuất hiện trong thư mục /usr/test
-- #ln /usr/testfile /user/test
+- #ln /usr/hieu /user/test
 - #ln <nguồn> <đích>
+- Chú ý : Nếu có sự thay đổi của nguồn thì đích sẽ thay đổi
+## 4. Quản lí dung lượng đĩa, ram
+Dung lượng đĩa:
+- #df -h //Liệt kê file system
+- #fdisk -l //Liệt kê partition
+
+Ram:
+- #free -m
+## 5. Xác định vị trí thư mục hiện tại
+- #pwd
