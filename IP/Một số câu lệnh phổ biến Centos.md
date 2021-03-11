@@ -20,3 +20,31 @@ Ram:
 - #free -m
 ## 5. Xác định vị trí thư mục hiện tại
 - #pwd
+## 6 – Truy cập thư mục
+- #cd {thư mục}
+- ví dụ: cd /hieu
+## 7 - liệt kê nội dung thư mục
+- #ls [-x / -l -a] {thư mục}
+- #ls -x  // hiển thị thư mục nhiều cột
+- #ls -l  // hiển thị chi tiết thông tin tập tin
+- #ls -a  // hiển thị tất cả các tập tin, kể cả tập tin ẩn 
+- ví dụ: ls -l /etc
+## 8 - Tạo và xóa thư mục
+- #mkdir {thư mục} // Tạo thư mục
+- Ví dụ:
+  - #cd /etc
+  - #mkdir hieu.txt
+- #rmdir {thư mục} // Xóa thư mục
+- Ví dụ:
+  - #cd /etc
+  - #rmdir hieu.txt
+## 9 – Xem tập tin văn bản
+- #cat {tập tin}
+- Ví dụ: cat /etc/test.txt
+- #more {tập tin} // Xem tập tin theo từng trang màn hình
+- Ví dụ : more /etc/passwd
+## 10 – Sao chép tập tin
+- #cp <tập-tin-nguồn> <tập-tin-đích>
+-Ví dụ: 
+  - #cp /etc/passwd /root/passwd
+  
