@@ -20,11 +20,25 @@ Khi bạn vào mục này sẽ hiển thị cho bạn tất cả interface mà s
 ![](https://image.prntscr.com/image/adiDO0SsT5G91H3NtSXLRw.png)
 
 - Bước 5: Cấu hình Disk
-Ở mục này bạn có thể lựa chọn chế độ tự động phân chia phân vùng hoặc bạn chia phần vùng theo yêu cầu của bạn. Ở đây tôi lựa chọn chế độ tự động.
 
 ![](https://image.prntscr.com/image/AqUy9wgNQySClzHnpurq0Q.png)
 
-![](https://image.prntscr.com/image/oC6a4GXMQhSKmPhzZCoXFQ.png)
+![](https://image.prntscr.com/image/Td4bsbFgSQGY7xS8kR3dbQ.png)
+
+![](https://image.prntscr.com/image/vvGbmQWmQUqJ76hyRELMDA.png)
+
+- Để Ram 1Gb thì Swap (Ram ảo) sẽ là gấp đôi Ram của CentOS 7.
+
+![](https://image.prntscr.com/image/n7nKgArKTd6A7lzz-etbZg.png)
+
+- Boot.
+
+![](https://image.prntscr.com/image/lnD70ZhPQx2h5gbDL0DvSg.png)
+
+- / số GIB còn lại.
+
+![](https://image.prntscr.com/image/AqxW6LsSSX_3tVTdzFf_zg.png)
+
 
 - Bước 6: Bắt đầu cài đặt
 ![](https://image.prntscr.com/image/81RV4FInR1231wDiNpQubw.png)
