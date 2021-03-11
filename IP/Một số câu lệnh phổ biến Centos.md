@@ -45,6 +45,6 @@ Ram:
 - Ví dụ : more /etc/passwd
 ## 10 – Sao chép tập tin
 - #cp <tập-tin-nguồn> <tập-tin-đích>
--Ví dụ: 
+- Ví dụ: 
   - #cp /etc/passwd /root/passwd
-  
+
