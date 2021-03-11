@@ -28,13 +28,17 @@ Ram:
 - #ls -x  // hiển thị thư mục nhiều cột
 - #ls -l  // hiển thị chi tiết thông tin tập tin
 - #ls -a  // hiển thị tất cả các tập tin, kể cả tập tin ẩn 
+- #ls -al // liệt kê tất cả file và thư mục với thông tin chi tiết như phân quyền, kích thước, chủ sở hữu, vân vân.
+- #ls -R  // liệt kê các file bao gồm cả các thư mục phụ bên trong
 - ví dụ: ls -l /etc
 ## 8 - Tạo và xóa thư mục
 - #mkdir {thư mục} // Tạo thư mục
 - Ví dụ:
   - #cd /etc
   - #mkdir hieu.txt
-- #rmdir {thư mục} // Xóa thư mục
+- #rmdir {thư mục} // Xóa thư mục trống
+- #rm -r  // xóa thư mục cùng và nội dung bên trong
+- **Lưu ý: Khi dùng các lệnh cơ bản trong Linux bạn cần cẩn thận, đặc biệt là lệnh này. Bạn cần kiểm tra kỹ bạn đang ở thư mục nào. Nó sẽ xóa mọi thứ và không khôi phục được.**
 - Ví dụ:
   - #cd /etc
   - #rmdir hieu.txt
@@ -50,7 +54,7 @@ Ram:
 ## 11 – Thay đổi tên tập tin hoặc di chuyển
 - #mv <tên-tập-tin-cũ> <tên-tập-tin-mới>
 - Ví dụ:
-  - #mv /etc/testfile /opt/
+  - #mv hieu.txt /etc/testfile /opt
 ## 12 – Tìm kiếm tập tin , chuỗi
 - #find [đường-dẫn] -name [biểu-thức-tìm-kiếm] // Tìm kiếm tập tin
 - Ví dụ:
