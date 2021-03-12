@@ -144,6 +144,7 @@ Ram:
 - #yum install wget -y
 - #wget {đường-dẫn}
   - VD: wget https://vnitnews.com/vnitnews.logo
+  
 
 ## 20 – Cấu hình mạng Centos
 - #ifconfig // Kiểm tra card mạng hiện thời
