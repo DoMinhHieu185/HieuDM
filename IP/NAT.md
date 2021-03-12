@@ -42,3 +42,4 @@ NAT (Network Address Translation) là một kỹ thuật cho phép chuyển đ�
 - Hầu hết các Network Traffic (là lưu lượng mạng ổn định, không bị gián đoạn trong quá trình truyền) trong Stub Domain mang tính chất cục bộ, do đó hệ thống mạng nội bộ không bao giờ bị lộ ra bên ngoài. 
 - Một Stub Domain có thể bao gồm cả địa chỉ IP Public và IP Private. Bất kỳ máy tính nào sử dụng địa chỉ IP Private đều phải dùng NAT để trao đổi thông tin với các máy tính khác.
 
+- Hiếu
