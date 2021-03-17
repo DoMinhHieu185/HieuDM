@@ -7,7 +7,7 @@
   - Ở đây ta thấy card ens33 được sử dụng, còn **lo** là địa chỉ loopback
 - Để cấu hình ta dùng lệnh
   - vi /etc/sysconfig/network-scripts/ifcfg-<tên card mạng> (ở đấy tên card mạng là ens33)
-
+- Hiểu đơn giản IP tĩnh sẽ là 1 địa chỉ xác định và không thay đổi, chính vì vậy IP thường được đặt cho máy chủ với mục đích riêng(máy chủ web, mail, dữ liệu,...) để nhiều người có thể truy cập mà không bị gián đoạn đường truyền dữ liệu và biết được chính xác vị trí chí
 ![](/Linux/image/29.png)
 
 - **Chú thích**
@@ -30,5 +30,5 @@
   - systemctl restart network
 - Kiểm tra thông tin IP tĩnh đã cấu hình cho card mạng ens33
   - ip a
-  
+
 ![](/Linux/image/31.png)
