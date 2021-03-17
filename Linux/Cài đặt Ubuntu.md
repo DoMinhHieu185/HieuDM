@@ -18,7 +18,7 @@
 
 ![](/Linux/image/5.png)
 
-- Tiếp theo ta chỉ định dung lượng ổ cứng cấp cho Ubuntu. Next
+- Tiếp theo ta chỉ định dung lượng ổ cứng cấp cho Ubuntu => Next
 
 ![](/Linux/image/6.png)
 
