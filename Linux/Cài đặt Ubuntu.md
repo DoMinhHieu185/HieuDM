@@ -44,7 +44,7 @@
 
 ![](/Linux/image/16.png)
 
-- Cài đặt SSH không. Ở đây mình sẽ không cài
+- Cài đặt SSH. Ở đây mình sẽ không cài
 
 ![](/Linux/image/17.png)
 ![](/Linux/image/18.png)
