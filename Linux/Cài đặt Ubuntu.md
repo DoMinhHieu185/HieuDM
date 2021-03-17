@@ -11,6 +11,7 @@
 ![](/Linux/image/3.png)
 
 - Cài đặt tài khoản người dùng
+
 ![](/Linux/image/4.png)
 
 - đặt tên cho máy ảo rồi chọn vị trí cài đặt
