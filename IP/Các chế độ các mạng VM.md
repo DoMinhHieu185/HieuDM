@@ -91,6 +91,7 @@
     ![](/Linux/image/ping12.png)
 
     - **ping máy ảo với máy ảo** máy 1 NAT, máy 2 host-only
+    
     ![](/Linux/image/ping13.png)
 
 
