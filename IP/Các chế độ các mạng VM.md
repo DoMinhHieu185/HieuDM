@@ -62,6 +62,7 @@
     ![](/Linux/image/ping11.png)
 
     - **ping máy ảo với máy ảo** máy 1 host-only, máy 2 Bridge
+    
     ![](/Linux/image/ping15.png)
 
   - **NAT**:ở chế độ này, card mạng của máy ảo kết nối với VMnet8, VMnet 8 cho phép máy ảo đi ra mạng vật lí bên ngoài internet thông qua cơ chế NAT(NAT divice). Lúc này lớp mạng bên trong máy ảo khác hoàn toàn với lớp mạng của card vật lí bên ngoài, hai mạng hoàn toàn tách biệt. IP của card mạng máy ảo sẽ được cấp bởi DHCP của VMnet8, trong trường hợp bạn muốn thiết lập IP tĩnh cho card mạng máy ảo bạn phải đảm bảo cấu hình chung lớp mạng với VMnet8 thì máy ảo có thể đi internet.
@@ -91,7 +92,7 @@
     ![](/Linux/image/ping12.png)
 
     - **ping máy ảo với máy ảo** máy 1 NAT, máy 2 host-only
-    
+
     ![](/Linux/image/ping13.png)
 
 
