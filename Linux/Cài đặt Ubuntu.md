@@ -1,2 +1,2 @@
 # Hướng dẫn cài đặt Ubuntu
-![](/Linux/1.png)
+![](/Linux/image/1.png)
