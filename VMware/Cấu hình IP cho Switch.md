@@ -25,6 +25,16 @@ Switch(config-vlan)#ip address 192.168.1.20 255.255.255.0  /// gán IP, subnetma
 Switch(config-vlan)#no shutdown   // cho phép int hoạt động 
 Switch(config-vlan)#exit //thoát
 ```
+## IV, Kết quả
+1. ping PC0 cho SW
 
+![](/VMware/image/4.png)
 
+2. Ping SW cho PC1
+
+![](/VMware/image/5.png)
+
+3. Ping PC0 cho PC1
+
+![](/VMware/image/6.png)
 
