@@ -6,15 +6,15 @@
 - Yêu cầu: đặt địa chỉ IP cho SW và PC để SW và PC có thể ping được với nhau
 
 ## II, Thiết lập địa chỉ IP cho Switch
-1. Chọn PC0 -> Desktop
+- Chọn PC0 -> Desktop
 
 ![](/Vmware/image/2.png)
 
-2. Chọn IP Configuration
+- Chọn IP Configuration
 
 ![](/Vmware/image/3.png)
 
-3. Làm tương tự với PC1
+- Làm tương tự với PC1
 
 ## III, Cấu hình IP Switch
 ```
