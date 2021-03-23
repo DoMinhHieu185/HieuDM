@@ -8,11 +8,11 @@
 ## II, Thiết lập địa chỉ IP cho Switch
 - Chọn PC0 -> Desktop
 
-![](/Vmware/image/2.png)
+![](/VMware/image/2.png)
 
 - Chọn IP Configuration
 
-![](/Vmware/image/3.png)
+![](/VMware/image/3.png)
 
 - Làm tương tự với PC1
 
