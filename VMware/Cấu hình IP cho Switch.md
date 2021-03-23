@@ -18,12 +18,12 @@
 
 ## III, Cấu hình IP Switch
 ```
-Switch>enable
-Switch#configure terminal
-Switch(config)#int vlan1
-Switch(config-vlan)#ip address 192.168.1.20 255.255.255.0
-Switch(config-vlan)#no shutdown
-Switch(config-vlan)#exit
+Switch>enable  // vào chế độ đặc quyền
+Switch#configure terminal // vào chế độ cấu hình 
+Switch(config)#int vlan1 // chọn vlan 1
+Switch(config-vlan)#ip address 192.168.1.20 255.255.255.0  /// gán IP, subnetmask cho Vlan 1
+Switch(config-vlan)#no shutdown   // cho phép int hoạt động 
+Switch(config-vlan)#exit //thoát
 ```
 
 
