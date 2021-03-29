@@ -39,6 +39,7 @@ Switch(config-vlan)#exit
 ```
 
 - Gán các port vào các VLAN
+
 Trên SW0:
 ```
 Switch>enable  // vào chế độ đặc quyền
