@@ -39,7 +39,7 @@ Switch(config-vlan)#exit
 ```
 
 - Gán các port vào các VLAN
-  - trên SW0:
+Trên SW0:
 ```
 Switch>enable  // vào chế độ đặc quyền
 Switch#configure terminal // vào chế độ cấu hình 
@@ -53,7 +53,7 @@ Switch(config)#int f0/3
 Switch(config-if)#switchport access vlan 3
 Switch(config-if)#exit
 ```
-  - Trên SW1:
+Trên SW1:
 ```
 Switch>enable  // vào chế độ đặc quyền
 Switch#configure terminal // vào chế độ cấu hình 
