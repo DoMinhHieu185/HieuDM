@@ -31,8 +31,8 @@ Switch(config)#hostname sw1
 - Cấu hình int fa0/1 tốc độ 100Mbps: Switch(config-if)#speed 100
 - Cấu hình full duplex cho fa0/1: Switch(config-if)#duplex full
 - gán int cho vlan: switch(config-if)#switchport access vlan 11
-- tắt int: Switch(config-if)shutdown
-- cho phép int hoạt động: Switch(config-if)no shutdown
+- tắt int: Switch(config-if)#shutdown
+- cho phép int hoạt động: Switch(config-if#)no shutdown
 - cho phép 5 phiên Telnet một lúc, mật khẩu là cisco: 
   - Switch(config)#line vty 0 4
   - Switch(config-line)#login
@@ -41,6 +41,14 @@ Switch(config)#hostname sw1
   - Switch(config)#line con 0
   - Switch(config-line)#login
   - Switch(config-line)#password cisco
+- Đồng bộ thông báo console, giữ những gì bạn đã gõ trên màn hình: Switch(config-line)#logging synchronous
+- Tạo vlan: Switch(config)#vlan 2 name HIEU
+- Gán int cho vlan 2:	Switch(config-if)#switchport access vlan 2
+- Buộc int là trunk vô điều kiện. Có thể chọn chế độ khác là access và dynamic: Switch(config-if)#switchport mode trunk
+- Gán thủ công switch vào miền VTP. Switch tự động trở thành 1 phần của miền VTP nếu nó đang trong miền "null" và nhận VTP frame:  Switch(config)#vtp domain lab
+- Thay đổi VTP mode từ chế độ mặc định là server sang client. Trong client mode thì không thay đổi được nữa: Switch(config)#vtp mode client
+
+
 
 
 
