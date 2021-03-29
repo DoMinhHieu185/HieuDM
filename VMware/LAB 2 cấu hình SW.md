@@ -69,7 +69,8 @@ Switch(config-if)#switchport access vlan 3
 Switch(config-if)#exit
 ```
 - Tạo đường Trunk từ Switch0 đến Switch1
-  - Trên SW0
+
+Trên SW0
 ```
 Switch>enable
 Switch#configure terminal
@@ -77,7 +78,7 @@ Switch(config)#int f0/4
 Switch(config-if)#switchport mode trunk
 Switch(config-if)#end
 ```
-  - Trên SW1
+Trên SW1
 ```
 Switch>enable
 Switch#configure terminal
