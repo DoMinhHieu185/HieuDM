@@ -11,7 +11,7 @@
 ![](/VMware/image/9.png)
   - Làm tương tự với các PC khác
 
-- Tạo vlan 2 va vlan 3 trên Switch0
+- Tạo vlan 2 va vlan 3 trên Switch
 
 Trên Switch 0
 
