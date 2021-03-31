@@ -37,4 +37,26 @@
 
 ## Tại sao phải dùng VLAN
 1. An ninh mạng:
+- Thông thường khi gói tin đến không đúng máy nhận nó sẽ được hủy tại máy nhận, nhưng vấn đề đặt ra ở đây là với những công cụ có sẵn, một người trong hệ thống có thể bắt lại các gói tin đi qua hệ thống, các gói tin này có thể chứa những thông tin quan trọng như mật khẩu hay những email nhạy cảm.
+- Với VLAN, bạn có thể kiểm soát người dùng truy cập không mong muốn vào tài nguyên. có thể đưa nhóm người dùng cần bảo mật cấp cao vào VLAN của riêng họ để người dùng bên ngoài từ VLAN không thể giao tiếp với họ.
 
+2. Phân phối broadcast 
+
+- Thực tế thì bản tin broadcast không mang thông tin của người sử dụng, nó chiếm băng thông trong hệ thống mạng để truyền đi. Broadcast cũng ảnh hưởng đến hiệu suất làm việc của các máy trạm trong hệ thống. Khi máy trạm nhận được một bản tin broadcast nó sẽ phải tiêu tốn CPU để xử lý gói tin đó mặc dù nó không phải là máy nhận. Quá trình này làm chậm lại quá trình xử lý của CPU và ảnh hưởng đến những ứng dụng khác đang chạy trên máy đó.
+- Công nghệ VLAN sẽ giúp giảm bớt ảnh hưởng của vấn đề broadcast đến băng thông hệ thống cũng như hiệu suất làm việc của máy trạm. Bằng cách tạo ra các VLAN và nhóm một nhóm làm việc vào chung một VLAN ta sẽ chia được các broadcast domain nhỏ hơn, và khi đó bản tin broadcast của VLAN này sẽ không ảnh hưởng đến VLAN khác, băng thông hệ thống được cải thiện, hiệu suất làm việc của máy trạm tăng lên.
+
+3. Tận dụng băng thông
+
+-  VLAN giúp tăng băng thông cho người sử dụng trong một mạng chia sẻ. Bằng cách tạo thêm nhiều broadcast domain, mỗi VLAN sẽ hoạt động với băng thông vốn có của hệ thông nhưng số người dùng ít hơn, do đó băng thông chia cho mỗi người dùng sẽ tăng lên đáng kể.
+
+4. Độ trễ của Router
+
+- Do gói tin càng qua nhiều router quá trình định tuyến càng làm tăng độ trễ. Bằng cách chia VLAN việc gói tin phải vượt qua nhiều phân đoạn mạng và nhiều router được loại bỏ, độ trễ sẽ cải thiện đáng kể.
+
+5 Những danh sách truy cập phức tạp 
+
+- Các bộ định tuyến của Cisco cho phép người quản trị có thể tạo ra một danh sách truy cập, quy định những chính sách nhất định đối với gói tin truyền qua nó. Bằng việc sử dụng danh sách truy cập người quản trị có thể chặn cụ thể một người dùng giao tiếp với một người dùng khác, hoặc ngăn chặn người dùng truy cập vào mạng hay toàn bộ mạng vào người dùng đó.
+- Ngoài ra danh sách truy cập cũng giúp quản lý vấn đề an ninh mạng hay quản lý lưu lượng qua một phân đoạn mạng để không ảnh hưởng đến vấn đề băng thông. Trong bất kỳ trường hợp nào, việc quản lý danh sách truy cập là một quá trình phức tạp, khi hệ thống phát triển lớn đó lại càng khó khăn hơn, và phải tuân theo các quy tắc của Cisco để có thể lọc các gói tin một cách chính xác.
+- Một cách đơn giản hơn ta có thể sử dụng công nghệ VLAN, những người liên quan đến nhau sẽ đưa về chung 1 vlan và thông tin trao đổi giữa họ sẽ chỉ trong vlan đó
+
+## Các loại vlan
