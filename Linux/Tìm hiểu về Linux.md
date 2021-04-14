@@ -29,19 +29,32 @@
 - Một số nhà sản xuất không phát triển driver hỗ trợ nền tảng Linux.
 - Bạn sẽ mất một khoảng thời gian để “thích nghi” nếu chuyển từ Windows sang Linux vì thực sự khá khó để làm quen với Linux.
 - Tuỳ vào tính chất, nhu cầu sử dụng mà bạn cần tìm một hệ điều hành thích hợp với mình.
-
-## Tài khoản và quyền User
-Linux có 3 loại user: Regular, Administrator (Root), Service. Trong đó:
-- Regular: Là tài khoản user thông thường được tạo khi cài đặt Ubuntu trên máy tính. Tất cả các file, thư mục được lưu trữ trong /home/ là thư mục chính của tài khoản này. User này không có quyền truy cập vào thưc mục của những user khác.
-- Root: Tài khoản này được tạo ra tại thời điểm cài đặt Linux. Root là một superuser, có thể truy cập vào những file bị giới hạn quyền, cài đặt phần mềm và có quyền quản trị. Bất cứ khi nào bạn muốn cài đặt phần mềm, thay đổi file hệ thống hoặc thực hiện các tác vụ cần quyền quản trị khác trên Linux thì phải đăng nhập bằng tài khoản Root. Những hoạt động như nghe nhạc, duyệt web thì có thể sử dụng tài khoản bình thường cũng được.
-- Service: Hẳn bạn cũng biết Linux là bá chủ trong hệ điều hành máy chủ. Các dịch vụ như Apache, Squid, email,... đều có những tài khoản dịch vụ cá nhân riêng. Những tài khoản này giúp tăng tính bảo mật cho máy tính. Linux cũng cho phép hoặc từ chối truy cập vào những nguồn lực khác nhau tùy thuộc vào dịch vụ.
 ## Công dụng Linux
 - Quản lý và điều phối các tài nguyên của hệ thống.
 - Giúp người dùng có thể nhìn thấy hầu như mọi dòng code trong Linux. Hỗ trợ tốt nhất cho việc chỉnh sửa và phát triển hệ điều hành dựa trên nhu cầu riêng của khách hàng
 - Miễn phí mọi tính năng và không cần mua bản quyền.
 - Giao diện đa dạng, tính bảo mật cao, thường xuyên được nâng cấp lên phiên bản mới.
 Đặc biệt, hệ điều hành Linux tương đối nhẹ. Do đó, các máy có cấu hình yếu vẫn có thể hoạt động ổn định trên hệ điều hành này.
+## Điểm khác biệt giữa Windows và Linux
+- Cấu trúc file: 
+  - Với Linux, các thư mục như My Documents, ổ đĩa C, ổ đĩa D sẽ được thay bằng cây dữ liệu. Các ổ đĩa sẽ được đặt vào đó, kể cả thư mục Home và Desktop.
+- Không sử dụng Registry:
+  - Registry là một cơ sở dữ liệu chủ cho toàn bộ các thiết lập nằm trên máy tính với chức năng nắm giữ thông tin ứng dụng, mật khẩu người dùng, thông tin thiết bị…
+  - Tuy nhiên, Linux không sử dụng registry, mà các dữ liệu được sắp xếp dưới dạng mô đun. Để lưu dữ liệu của người dùng, Linux lưu thiết lập của mình trên cơ sở chương trình phân cấp người dùng.
+- Trình quản lý gói
+  - Với Linux, các chương trình được cài đặt trong máy không ở dưới dạng *.exe như Windows mà được tập hợp trong một chương trình quản lý gói (package manager).
+- Giao diện 
+  - Trong quá trình nâng cấp và phát triển, giao diện của Windows không có quá nhiều thay đổi. Trong khi với Linux, vì giao diện hoàn toàn tách rời với hệ thống lõi nên người dùng có thể tùy thời đổi giao diện mà không cần cài lại win.
+- Lệnh đầu cuối
+  - Linux là hệ điều hành mở với các dòng code hiển thi công khai được trình bày dưới dạng một hộp đen với các dòng chữ xanh.
+- Tài khoản và quyền user
 
+Linux có 3 loại user: Regular, Administrator (Root), Service. Trong đó:
+  - Regular: Là tài khoản user thông thường được tạo khi cài đặt Ubuntu trên máy tính. Tất cả các file, thư mục được lưu trữ trong /home/ là thư mục chính của tài khoản này. User này không có quyền truy cập vào thưc mục của những user khác.
+  - Root: Tài khoản này được tạo ra tại thời điểm cài đặt Linux. Root là một superuser, có thể truy cập vào những file bị giới hạn quyền, cài đặt phần mềm và có quyền quản trị. Bất cứ khi nào bạn muốn cài đặt phần mềm, thay đổi file hệ thống hoặc thực hiện các tác vụ cần quyền quản trị khác trên Linux thì phải đăng nhập bằng tài khoản Root. Những hoạt động như nghe nhạc, duyệt web thì có thể sử dụng tài khoản bình thường cũng được.
+  - Service: Hẳn bạn cũng biết Linux là bá chủ trong hệ điều hành máy chủ. Các dịch vụ như Apache, Squid, email,... đều có những tài khoản dịch vụ cá nhân riêng. Những tài khoản này giúp tăng tính bảo mật cho máy tính. Linux cũng cho phép hoặc từ chối truy cập vào những nguồn lực khác nhau tùy thuộc vào dịch vụ.
+- Các thiết lập điều khiển khác
+  - Linux thích hợp dùng để lướt web, chat và email hơn là sử dụng để chơi game.
 
 
 
