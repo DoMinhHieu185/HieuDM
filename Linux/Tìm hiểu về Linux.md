@@ -48,7 +48,6 @@
 - Lệnh đầu cuối
   - Linux là hệ điều hành mở với các dòng code hiển thi công khai được trình bày dưới dạng một hộp đen với các dòng chữ xanh.
 - Tài khoản và quyền user
-
 Linux có 3 loại user: Regular, Administrator (Root), Service. Trong đó:
   - Regular: Là tài khoản user thông thường được tạo khi cài đặt Ubuntu trên máy tính. Tất cả các file, thư mục được lưu trữ trong /home/ là thư mục chính của tài khoản này. User này không có quyền truy cập vào thưc mục của những user khác.
   - Root: Tài khoản này được tạo ra tại thời điểm cài đặt Linux. Root là một superuser, có thể truy cập vào những file bị giới hạn quyền, cài đặt phần mềm và có quyền quản trị. Bất cứ khi nào bạn muốn cài đặt phần mềm, thay đổi file hệ thống hoặc thực hiện các tác vụ cần quyền quản trị khác trên Linux thì phải đăng nhập bằng tài khoản Root. Những hoạt động như nghe nhạc, duyệt web thì có thể sử dụng tài khoản bình thường cũng được.
