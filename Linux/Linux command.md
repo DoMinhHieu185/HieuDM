@@ -127,4 +127,46 @@ Tìm kiếm đệ quy(tìm kiếm tất cả các tệp trong thư mục hiện 
 ### 6.3, grep -v
 In các dòng không chứa từ khóa.
 ![](/Linux/image/grep-v.png)
-### 
+### 6.4, grep -o
+Chỉ hiển thị từ khóa cần tìm
+![](/Linux/image/grep-o.png)
+### 6.5, find /*root* -name *text1.txt*
+Tìm file với tên cụ thể
+![](/Linux/image/find1.png)
+### 6.6, find /*root* -user *root*
+Tìm file với tên chủ sở hữu
+![](/Linux/image/find2.png)
+### 6.7 whereis
+Dùng để tìm vị trí tệp nguồn, binary file của một lệnh hoặc phần hướng dẫn sử dụng cho một tệp được chỉ định.
+![](/Linux/image/whereis.png)
+
+## 7, File Operations(Thao tác tệp)
+### 7.1, touch *file1*
+Tạo file
+![](/Linux/image/touch.png)
+### 7.2, cat *file1* *file2*
+Nối các tệp và kết xuất
+![](/Linux/image/cat.png)
+### 7.3, less file1
+Xem và phân trang *file1*
+![](/Linux/image/less.png)
+### 7.4, file *file1*
+định dạng của *file1*
+![](/Linux/image/file.png)
+### 7.5, cp *file1* *file2*
+copy file1 sang file2
+![](/Linux/image/cp.png)
+### 7.6, mv *file1* *file2*
+đổi tên tệp
+![](/Linux/image/mv.png)
+di chuyển tệp tin thư mục
+![](/Linux/image/mv2.png)
+### 7.7, rm *file1*
+xóa file
+![](/Linux/image/rm.png)
+### 7.8, head *file1*
+Hiển thị 10 dòng đầu tiên của tệp 1
+![](/Linux/image/head.png)
+### 7.9, tail *file1*
+Hiển thị 10 dòng cuối của file 1
+![](/Linux/image/tail.png)
