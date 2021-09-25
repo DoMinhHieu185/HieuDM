@@ -104,11 +104,17 @@ Tạo nhóm
 groupadd newgroup
 ```
 
-Thêm user vào group
+Thêm user vào group(user mới)
 
 ```
 useradd -a -G newgroup username
 ```
+
+Thêm user vào group(user cũ)
+```
+usermod -a -G newgroup username
+```
+
 Xóa một group
 ```
 groupdel newgroup
