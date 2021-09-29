@@ -54,7 +54,7 @@ IV, Ưu, nhược điểm
  - Client truy cập file system bằng các cuộc gọi hệ thống (system call)
  - Giao diện hệ thống UNIX được thay thế bằng giao diện cho hệ thống tệp ảo (VFS) (các hệ điều hành hiện đại đều cung cấp VFS) 
  - Các hoạt động trên giao diện VFS được chuyển đến hệ thống tệp cục bộ (Local file) hoặc được chuyển đến 1 thành phần riêng biệt gọi là NFS Client 
- - NFS client đảm nhieemh việc xử lý quyền truy cập vào các tệp được lưu trữ tại máy chủ từ xa 
+ - NFS client đảm nhiệm việc xử lý quyền truy cập vào các tệp được lưu trữ tại máy chủ từ xa 
  - Trong NFS, tất cả giao tiếp giữa máy khách và máy chủ được thực hiện thông qua RPC (cuộc gọi thủ tục)
  
  > RPC chịu trách nhiện dịch yêu cầu của client và gửi tới server, khi máy chủ nhận được yêu cầu, client sẽ đợi server hoàn tất các xử lý, gửi phản hồi lại cho client và ứng dụng phía client mới tiếp tục quá trình của nó.
