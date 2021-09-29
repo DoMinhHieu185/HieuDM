@@ -1,6 +1,6 @@
 # Tìm hiểu về NFS
 ## I,Tổng quan NFS
-* NFS(Network File System) là một giao thức phân phối tập tin hệ thống được phát triển vào năm 1984 
+* NFS(Network File System) là một phương pháp phân phối tập tin hệ thống được phát triển vào năm 1984 
 * NFS là một hệ thống tệp phân tán cho phép người dùng gắn kết các hệ thống tệp từ xa như thể chúng là cục bộ
 * NFS sử dụng mô hình máy khách-máy chủ, trong đó máy chủ xuất các thư mục để được chia sẻ và máy khách gắn kết các thư mục để truy cập các tệp trong đó.
 * Sử dụng TCP và UDP để truy cập và phân phối dữ liệu tùy thuộc vào phiên bản được sử dụng.
