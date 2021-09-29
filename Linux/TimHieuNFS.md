@@ -49,7 +49,9 @@ IV, Ưu, nhược điểm
 - XDR layer:XDR là một ngôn ngữ mô tả cho phép các kiểu dữ liệu được xác định một cách nhất quán. Về mặt khái niệm, XDR nằm ở lớp trình bày ; các biểu diễn phổ quát của nó cho phép dữ liệu được trao đổi bằng NFS giữa các máy tính có thể sử dụng các phương pháp lưu trữ dữ liệu nội bộ rất khác nhau.
 - NFS Procedures and Operations: Chức năng thực tế của NFS được thực hiện dưới dạng các thủ tục và hoạt động có chức năng khái niệm ở lớp bảy của mô hình OSI. Các thủ tục này chỉ định các tác vụ cụ thể được thực hiện trên các tệp qua mạng, sử dụng XDR để đại diện cho dữ liệu và RPC để thực hiện các lệnh trên mạng internet.
 # VI, Kiến trúc
-![](/Linux/image/nfs5.png)
+
+![](/Linux/image/nfs5.jpg)
+
 **Phía client:** 
  - Client truy cập file system bằng các cuộc gọi hệ thống (system call)
  - Giao diện hệ thống UNIX được thay thế bằng giao diện cho hệ thống tệp ảo (VFS) (các hệ điều hành hiện đại đều cung cấp VFS) 
