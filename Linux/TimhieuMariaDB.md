@@ -71,3 +71,16 @@ Những ưu điểm lớn nhất của hệ quản trị này phải kể đến
 * Bổ sung thêm nhiều Engine hơn
 * Kết hợp cả SQL và NoSQL
 * Hỗ trợ tiếng Việt
+
+## So sánh MariaDB vs MySQL
+* MySQL: Mã nguồn đóng
+* MariaDB: Mã nguồn mở
+### Cơ sở hình thành
+* MySQL được hình thành từ năm 1995 dựa trên cơ sở của C / C ++, và hiện tại được duy trì và phát triển bởi đội ngũ Oracle.
+* Phiên bản đầu tiên của MariaDB ra mắt vào năm 2009, được phát triển trên nền tảng MySQL và thừa kế những ưu điểm của MySQL.
+### Ngôn ngữ lập trình hỗ trợ
+* MySQL: Ada, C, C#, C++, D, Delphi, Eiffel, Erlang, Haskell, Java, JavaScript (Node.js), Objective-C, OCaml, Perl, PHP, Python, Ruby, Scheme, Tcl
+* MariaDB: Cũng tương tự MySQL nhưng không hỗ trợ Delphi
+### Công cụ lưu trữ
+* MySQL sẽ bao gồm các công cụ lưu trữ sau: InnoDB, MyISAM, BLACKHOLE, CSV, MEMORY, ARCHIVE, MERGE.
+* MariaDB bao gồm: InnoDB, MyISAM, BLACKHOLE, CSV, MEMORY, ARCHIVE, MERGE, ColumnStore, MyRocks, Aria, SphinxSE, TokuDB, CONNECT, SEQUENCE, Spider, Cassandra.
