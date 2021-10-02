@@ -5,17 +5,27 @@
 * NFS sử dụng mô hình máy khách-máy chủ, trong đó máy chủ xuất các thư mục để được chia sẻ và máy khách gắn kết các thư mục để truy cập các tệp trong đó.
 * Sử dụng TCP và UDP để truy cập và phân phối dữ liệu tùy thuộc vào phiên bản được sử dụng.
 * Cơ chế hệ thống tệp cho phép lưu trữ và truy xuất dữ liệu từ nhiều đĩa và thư mục.
-## II,Cách hoạt động
+## II, Mục tiêu 
+* NFS được thiết kế để đơn giản hóa việc chia sẻ tài nguyên hệ thống tệp trong một mạng không đồng nhất máy móc.
+* Cung cấp các tệp từ xa cho các chương trình cục bộ mà không cầnphải sửa đổi, hoặc thậm chí liên kết lại, các chương trình đó.
+* Quyền truy cập tệp từ xacó thể so sánh với tốc độ truy cập tệp cục bộ.
+## III,Cách hoạt động
 * Để truy cập dữ liệu được lưu trữ trên 1 máy chủ, server sẽ triển khai các quy trình nền NFS để cung cấp dữ liệu cho khách hàng. Quản trị viên máy chủ xác định những gì cần cung cấp và đảm bảo có thể nhận ra các máy khách được xác nhận. 
 * Từ client, yêu cầu quyền truy cập vào dữ liệu đã xuất, bằng cách sử dụng lệnh mount.
 * Server NFS tham chiếu tệp cấu hình /etc/export để xác định xem máy khách có được phép truy cập vào bất kỳ hệ thống nào không. Sau khi xác minh, tất cả hoạt động tập tin và thư mục được phép sử dụng trên Client
-### 2.1, Mô hình truy cập từ xa
+Các mục tiêu thiết kế tổng thể của NFS là:
+  - Máy và Hệ điều hành Độc lập
+  - Khôi phục sự cố
+  - Truy cập minh bạch
+  - Ngữ nghĩa UNIX được duy trì trên ứng dụng khách UNIX
+  - Hiệu suất hợp lý
+### 3.1, Mô hình truy cập từ xa
 ![](/Linux/image/NFS1.png)
 Client sẽ gửi yêu cầu từ xa để truy cập file trên Server
-### 2.2, Mô hình tải lên tải xuống
+### 3.2, Mô hình tải lên tải xuống
 ![](/Linux/image/NFS3.png)
 Client sẽ tải xuống old file để truy cập và thực hiện trên client, khi client thực hiện xong, file sẽ được tải về server.
-## III, Các phiên bản NFS
+## IV, Các phiên bản NFS
 * NFSv2: Tháng 3 năm 1989
   * Có thể sử dụng cả TCP và UDP qua mạng IP ( cổng 2049 )
   * Ban đầu chỉ hoạt động trên UDP
@@ -32,7 +42,7 @@ Client sẽ tải xuống old file để truy cập và thực hiện trên clie
 * NFSv4.2: Tháng 11 năm 2016
   * Sao chép và sao chép phía máy chủ
   * Một lợi thế lớn của NFSv4 so với các phiên bản trước đó là chỉ có một cổng IP được sử dụng để chạy dịch vụ, giúp đơn giản hóa việc sử dụng giao thức trên tường lửa.
-IV, Ưu, nhược điểm
+## V, Ưu, nhược điểm
 **Ưu điểm**:
   * NFS là 1 giải pháp chi phí thấp để chia sẻ tệp mạng.
   * Dễ cài đặt vì nó sử dụng cơ sở hạ tầng IP hiện có
@@ -43,12 +53,12 @@ IV, Ưu, nhược điểm
   * Client và server tin tưởng lần nhau vô điều kiện 
   * Tên máy chủ có thể là giả mạo (tự xưng là máy khác)
 
-# V, Các layers NFS
+# VI, Các layers NFS
 ![](/Linux/image/nfs4.png)
 - RPC leyer: RPC là một dịch vụ lớp phiên chung được sử dụng để triển khai chức năng kết nối mạng máy khách / máy chủ. Nó mở rộng khái niệm về một chương trình gọi một thủ tục cục bộ trên một máy tính chủ cụ thể, thành việc gọi một thủ tục trên một thiết bị từ xa qua mạng.
 - XDR layer:XDR là một ngôn ngữ mô tả cho phép các kiểu dữ liệu được xác định một cách nhất quán. Về mặt khái niệm, XDR nằm ở lớp trình bày ; các biểu diễn phổ quát của nó cho phép dữ liệu được trao đổi bằng NFS giữa các máy tính có thể sử dụng các phương pháp lưu trữ dữ liệu nội bộ rất khác nhau.
 - NFS Procedures and Operations: Chức năng thực tế của NFS được thực hiện dưới dạng các thủ tục và hoạt động có chức năng khái niệm ở lớp bảy của mô hình OSI. Các thủ tục này chỉ định các tác vụ cụ thể được thực hiện trên các tệp qua mạng, sử dụng XDR để đại diện cho dữ liệu và RPC để thực hiện các lệnh trên mạng internet.
-# VI, Kiến trúc
+# VII, Kiến trúc
 
 ![](/Linux/image/nfs5.jpg)
 
