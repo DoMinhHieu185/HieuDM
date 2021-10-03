@@ -73,6 +73,7 @@ Những ưu điểm lớn nhất của hệ quản trị này phải kể đến
 * Hỗ trợ tiếng Việt
 
 ## So sánh MariaDB vs MySQL
+### Mã nguồn
 * MySQL: Mã nguồn đóng
 * MariaDB: Mã nguồn mở
 ### Cơ sở hình thành
