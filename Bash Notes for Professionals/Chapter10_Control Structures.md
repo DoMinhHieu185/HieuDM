@@ -7,8 +7,8 @@
 |-f "$file"|Trả về true nếu tệp tồn tại và là tệp thông thường|
 |-h "$file"|Trả về true nếu tệp tồn tại và là một liên kết tượng trưng|
 
-|Bộ so sánh chuỗi||Thông tin chi tiết|
-|-||-|
+|Bộ so sánh chuỗi|Thông tin chi tiết|
+|-|-|
 |-z "$str"|Đúng nếu độ dài của chuỗi bằng 0|
 |-n "$str"|Đúng nếu độ dài của chuỗi khác 0|
 |"$str" = "$str2"|Đúng nếu chuỗi $ str bằng chuỗi $ str2. Không tốt nhất cho số nguyên. Nó có thể hoạt động nhưng sẽ mâu thuẫn|
