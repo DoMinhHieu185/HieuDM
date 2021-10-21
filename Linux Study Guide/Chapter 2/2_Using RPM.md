@@ -22,14 +22,14 @@ Công cụ chính để làm việc với các tệp RPM là chương trình rpm
 rpm ACTION [OPTION] PACKAGE-FILE
 ```
 BẢNG 2 .1 Các hành động của lệnh rpm
-|Short||Long||Mô tả|
-|-||-||-|
-|-e||--erase||Loại bỏ gói được chỉ định|
-|-F||--freshen||Chỉ nâng cấp gói nếu phiên bản cũ hơn đã tồn tại|
-|-i||--install||Cài đặt gói được chỉ định|
-|-q||--query||Truy vấn xem gói được chỉ định có được cài đặt hay không|
-|-U||--upgrade||Cài đặt hoặc nâng cấp gói được chỉ định|
-|-V||--verify||Xác minh xem các tệp gói có hiện diện hay không và tính toàn vẹn của gói|
+|Short|Long|Mô tả|
+|-|-|-|
+|-e|--erase|Loại bỏ gói được chỉ định|
+|-F|--freshen|Chỉ nâng cấp gói nếu phiên bản cũ hơn đã tồn tại|
+|-i|--install|Cài đặt gói được chỉ định|
+|-q|--query|Truy vấn xem gói được chỉ định có được cài đặt hay không|
+|-U|--upgrade|Cài đặt hoặc nâng cấp gói được chỉ định|
+|-V|--verify|Xác minh xem các tệp gói có hiện diện hay không và tính toàn vẹn của gói|
 
 #### Installing and Updating RPM Packages(Cài đặt và cập nhật các gói RPM)
 Để sử dụng lệnh rpm, bạn phải tải tệp gói .rpm xuống hệ thống của mình. Mặc dù bạn có thể sử dụng hành động -i để cài đặt các gói, nhưng hành động -U sẽ phổ biến hơn để cài đặt gói mới hoặc nâng cấp gói nếu nó đã được cài đặt
@@ -47,14 +47,14 @@ httpd-2.4.6-97.el7.centos.x86_64
 package docker is not installed
 ```
 * Bảng 2: Các tùy chọn hành động truy vấn lệnh rpm
-|Short option||Long option||Mô tả|
-|-||-||-|
-|-c||--configfiles||Liệt kê tên và tham chiếu thư mục tuyệt đối của các tệp cấu hình gói|
-|-i||--info||Cung cấp thông tin chi tiết, bao gồm phiên bản, ngày cài đặt và chữ ký|
-|N/A||--provides||Cho biết gói cung cấp những tiện ích nào|
-|-R||--requires||Hiển thị các yêu cầu gói khác nhau (phụ thuộc)|
-|-s||--state||Cung cấp trạng thái của các tệp khác nhau trong một gói, chẳng hạn như bình thường (đã cài đặt), chưa được cài đặt hoặc đã thay thế|
-|N/A||--what-provides||Hiển thị cho gói nào một tệp thuộc về|
+|Short option|Long option|Mô tả|
+|-|-|-|
+|-c|--configfiles|Liệt kê tên và tham chiếu thư mục tuyệt đối của các tệp cấu hình gói|
+|-i|--info|Cung cấp thông tin chi tiết, bao gồm phiên bản, ngày cài đặt và chữ ký|
+|N/A|--provides|Cho biết gói cung cấp những tiện ích nào|
+|-R|--requires|Hiển thị các yêu cầu gói khác nhau (phụ thuộc)|
+|-s|--state|Cung cấp trạng thái của các tệp khác nhau trong một gói, chẳng hạn như bình thường (đã cài đặt), chưa được cài đặt hoặc đã thay thế|
+|N/A|--what-provides|Hiển thị cho gói nào một tệp thuộc về|
 
 thêm tùy chọn -i để xem chi tiết các gói,
 ```
