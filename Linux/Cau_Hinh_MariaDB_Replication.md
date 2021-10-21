@@ -36,7 +36,7 @@ Mặc dù chỉ có một luồng đọc binary log từ master và một luồn
 So sánh với cùng lệnh này ở máy master.
 * Luồng SQL(SQL Thread): đọc các sự kiện từ relay log được lưu trữ cục bộ trên slave (tập tin được ghi bởi luồng IO) và thực thi các sự kiện đó nhanh nhất có thể.
 
-Để xem trạng thái của luồng SQL, thực thi lệnh show slave status\G:
+Để xem trạng thái của luồng SQL, thực thi lệnh `show slave status\G`:
   * Relay_Master_Log_File : tập tin binary log trên master mà luồng SQL đang đọc (thực ra là đọc trên relay log)
   *  Exec_Master_Log_Pos: vị trí trên file binary log nơi được thực thi bởi luồng SQL.
 

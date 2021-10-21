@@ -95,6 +95,7 @@ success
 [root@localhost ~]# vi /etc/httpd/conf.d/phpMyAdmin.conf
 ```
 * Cấu hình địa chỉ IP bạn cho phép truy cập
+
 ![](/Linux/image/db6.png)
 
 * Khởi động lại dịch vụ httpd
@@ -102,4 +103,3 @@ success
 [root@localhost ~]# systemctl restart httpd
 ```
 
-### 4
