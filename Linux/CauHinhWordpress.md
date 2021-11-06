@@ -165,4 +165,6 @@ Require all granted
 ```
 
 ## Kết quả
+Vào trình duyệt Web và điều hướng đến địa chỉ ip của Web server "http://(server's hostname or IP address)/wordpress/"
+
 ![](/Linux/image/wp4.png)
