@@ -15,6 +15,7 @@
 [mysqld]
 character-set-server=utf8
 ```
+
 ![](/Linux/image/db1.png)
 
 * Khởi động dịch vụ
@@ -35,18 +36,23 @@ Câu lệnh sử dụng
 mysql_secure_installation
 ```
 * Cài đặt password cho tài khoản root MariaDB
+
 ![](/Linux/image/setroot.png)
 
 * Remove tài khoản Anonymouns
+
 ![](/Linux/image/db2.png)
 
 * Không cho phép đăng nhập root từ xa
+
 ![](/Linux/image/db3.png)
 
 * Xóa cơ sở dữ liệu thử nghiệm
+
 ![](/Linux/image/db4.png)
 
 * Cập nhập các cấu hình trên vào bảng đặc quyền(privilege tables)
+
 ![](/Linux/image/db5.png)
 
 **Bước 3**: Truy cập vào MariaDB
@@ -141,6 +147,22 @@ Zend Engine v2.4.0, Copyright (c) 1998-2013 Zend Technologies
 [root@localhost ~]# yum --enablerepo=epel install wordpress -y
 ```
 Cấu hình file wp-config.php
+```
+[root@localhost ~]# vi /etc/wordpress/wp-config.php
+```
+
 ![](/Linux/image/wp3.png)
+
 * Lưu ý : 192.168.2.129 là địa chỉ ip localhost của sql .
 Tiếp theo ta tiến hành tắt cổng IFace ens33 trên máy sql để máy không thể đi ra ngoài mạng và chỉ sử dụng để kết nối trong local .
+
+Cấu hình file wordpress.conf
+```
+vi /etc/httpd/conf.d/wordpress.conf
+
+# line 8: add
+Require all granted
+```
+
+## Kết quả
+![](/Linux/image/wp4.png)
