@@ -1,4 +1,20 @@
 # Tìm hiểu về LVM
+- [I, Tổng quan](#I-Tổng-quan)
+  - [1, Khái niệm](#1-Khai-niệm)
+  - [2, Bố cục](#2-Bố-cục)
+  - [3, Chức năng](#3-Chức-năng)
+- [II, Ưu và Nhược điểm](#II-Ưu-và-Nhược-điểm)
+- [III, Cách hoạt động của LVM](#III-Cách-hoạt-động-của-LVM)
+- [IV, Các kiểu lưu trữ LVM](#IV-Các-kiểu-lưu-trữ-LVM)
+- [V, Hướng dẫn sử dụng LVM](#V-Hướng-dẫn-sử-dụng-LVM)
+  - [1. Thao tác tạo](#1-Thao-tác-tạo)
+  - [2. Thay đổi dung lượng](#2-Thay-đổi-dung-lượng)
+  - [3.Thao tác xóa](#3-Thao-tác-xóa)
+  - [4.Snapshot và restore của Logical Volume](#4-Snapshot-và-restore-của-Logical-Volume)
+  - [5, Tính năng Thin Provisioning Volumes](#5-Tính-năng-Thin-Provisioning-Volumes)
+  - [6,Tính năng Manage Multiple Logical Volume Management Disk sử dụng Striping I/O](#6-Tính-năng-Manage-Multiple-Logical-Volume-Management-Disk-sử-dụng-Striping-I/O)
+  - [7, Tính năng LVM Migration](#7-Tính-năng-LVM-Migration)
+
 ## I, Tổng quan
 ### 1, Khái niệm
 Logical Volume Manager (LVM) : LVM là kỹ thuật quản lý việc thay đổi kích thước lưu trữ của ổ cứng. Là một phương pháp ấn định không gian ổ đĩa thành những logicalvolume khiến cho việc thay đổi kích thước của một phân vùng trở nên dễ dàng. Điều này thật dễ dàng khi bạn muốn quản lý công việc của mình tại riêng một phân vùng mà muốn mở rộng nó ra lớn hơn.
@@ -60,7 +76,7 @@ Khi ta lưu trữ ổ dữ liệu vào ổ đĩa thì ta sẽ có hai kiểu lư
 * Ưu điểm: Tốc độ sẽ nhanh hơn vì tất cả các phân vùng sẽ cùng làm việc. Tốc độ đọc và ghi cũng nhannh hơn phương pháp Linear
 * Nhược điểm: Khi mất dữ liệu ở một phân vùng thì sẽ bị mất và ảnh hưởng rất nhiều dữ liệu bởi vì mỗi dữ liệu đều được lưu ở nhiều phân vùng khi sử dụng phương pháp striped
 
-## V .Hướng dẫn sử dụng LVM
+## V, Hướng dẫn sử dụng LVM
 ### 1. Thao tác tạo
   > Lưu ý : Nếu phân vùng được mount vào thư mục root rồi thì không thể tạo physical volume
 **Tạo physical volume**
