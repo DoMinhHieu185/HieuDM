@@ -1,12 +1,12 @@
 # Tìm hiểu RAID
 
 ## Mục lục
-[1, Khái niệm](#1-Khái-niệm)
-[2, Cách thức hoạt động](#2-Cách-thức-hoạt-động)
-[3, Kỹ thuật lưu trữ RAID](#3-Kỹ-thuật-lưu-trữ-RAID)
-[4, Điều kiện để cấu hình RAID](#4-Điều-kiện-để-cấu-hình-RAID)
-[5, Cách tính dung lượng RAID](#5-Cách-tính-dung-lượng-RAID)
-[6, Phân loại RAID](#6-Phân-loại-RAID)
+- [1, Khái niệm](#1-Khái-niệm)
+- [2, Cách thức hoạt động](#2-Cách-thức-hoạt-động)
+- [3, Kỹ thuật lưu trữ RAID](#3-Kỹ-thuật-lưu-trữ-RAID)
+- [4, Điều kiện để cấu hình RAID](#4-Điều-kiện-để-cấu-hình-RAID)
+- [5, Cách tính dung lượng RAID](#5-Cách-tính-dung-lượng-RAID)
+- [6, Phân loại RAID](#6-Phân-loại-RAID)
 ## 1, Khái niệm
 RAID (Redundant Arrays of Inexpensive Disks hoặc Redundant Arrays of Independent Disks) là hình thức ghép nhiều ổ đĩa cứng vật lý thành một hệ thống ổ đĩa cứng có chức năng gia tăng tốc độ đọc/ghi dữ liệu hoặc nhằm tăng thêm sự an toàn của dữ liệu chứa trên hệ thống đĩa hoặc kết hợp cả hai yếu tố trên.
 ## 2, Cách thức hoạt động
