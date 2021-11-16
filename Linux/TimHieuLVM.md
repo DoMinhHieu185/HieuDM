@@ -328,6 +328,9 @@ Qua kiểm tra trên thì kết quả restore cho chúng ta thấy kết quả t
 
 ### 5, Tính năng Thin Provisioning Volumes
 Tính năng này cho phép chúng ta tạo ra số Volume có tổng dung lượng lớn hơn dung lượng cho phép.
+
+![](/Linux/image/lvm13.png)
+
 #### 5.1, Setup Thin Pool và Volume
 Chúng ta tạo 1 Physical Volume /dev/sde và sau đó dùng lệnh sau để tạo ra 1 Volume group cho Thin-Pool:
 ```
