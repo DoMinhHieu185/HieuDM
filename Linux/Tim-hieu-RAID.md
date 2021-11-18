@@ -2,17 +2,33 @@
 
 ## Mục lục
 - [1, Khái niệm](#1-Khái-niệm)
-- [2, Cách thức hoạt động](#2-Cách-thức-hoạt-động)
-- [3, Kỹ thuật lưu trữ RAID](#3-Kỹ-thuật-lưu-trữ-RAID)
-- [4, Điều kiện để cấu hình RAID](#4-Điều-kiện-để-cấu-hình-RAID)
-- [5, Cách tính dung lượng RAID](#5-Cách-tính-dung-lượng-RAID)
-- [6, Phân loại RAID](#6-Phân-loại-RAID)
+- [2, Mục đích sử dụng các loại RAID](#2-Mục-đích-sử-dụng-các-loại-RAID)
+- [3, Cách thức hoạt động](#2-Cách-thức-hoạt-động)
+- [4, Kỹ thuật lưu trữ RAID](#3-Kỹ-thuật-lưu-trữ-RAID)
+- [5, Điều kiện để cấu hình RAID](#4-Điều-kiện-để-cấu-hình-RAID)
+- [6, Cách tính dung lượng RAID](#5-Cách-tính-dung-lượng-RAID)
+- [7, Phân loại RAID](#6-Phân-loại-RAID)
+- [8, Cách triển khai các loại RAID ](#8-Cách-triển-khai-các-loại-RAID )
 ## 1, Khái niệm
-RAID (Redundant Arrays of Inexpensive Disks hoặc Redundant Arrays of Independent Disks) là hình thức ghép nhiều ổ đĩa cứng vật lý thành một hệ thống ổ đĩa cứng có chức năng gia tăng tốc độ đọc/ghi dữ liệu hoặc nhằm tăng thêm sự an toàn của dữ liệu chứa trên hệ thống đĩa hoặc kết hợp cả hai yếu tố trên.
-## 2, Cách thức hoạt động
+RAID là chữ viết tắt của Redundant Array of Independent Disks. Đầu tiên, RAID được dùng như một giải pháp phòng hộ vì nó cho phép ghi dữ liệu lên nhiều đĩa cứng cùng lúc. Về sau, RAID đã có nhiều biến thể ngoài việc cho phép đảm bảo an toàn dữ liệu mà còn giúp gia tăng đáng kể tốc độ truy xuất dữ liệu từ đĩa cứng.
+
+RAID có nghĩa là “Dự phòng các ổ đĩa độc lập”. Nó được thiết kế với khả năng chịu lỗi hoặc bảo vệ chuyển đổi dự phòng trong một mảng lưu trữ trên nhiều đĩa, đảm bảo rằng nếu một ổ đĩa bị lỗi, nội dung của mảng sẽ không bị mất.
+
+Về phân loại thì có khá nhiều các loại RAID thường được sử dụng như RAID 0, RAID 1, RAID 5, RAID 6, RAID 10...
+## 2, Mục đích sử dụng các loại RAID
+Việc sử dụng các loại RAID đem lại rất nhiều lợi ích cho người sử dụng so với các loại ổ cứng thông thường. Không thể không kể đến những lợi ích sau đây.
+
++ Khả năng chịu lỗi: Đối với hầu hết các loại RAID đều có một số mức độ dự phòng và khả năng chịu lỗi được tích hợp vào mảng giúp ngăn ngừa mất dữ liệu.
+
++ Dung lượng lớn: Các loại RAID có thể hỗ trợ dung lượng cao hơn nhiều so với một ổ đĩa. Khi bạn cần thêm dung lượng, bạn chỉ cần thêm nhiều ổ đĩa khá là đơn giản.
+
++ Tốc độ: RAID có thể chạy nhanh hơn nhiều so với một ổ đĩa vì có thể ghi và đọc từ nhiều đĩa cùng một lúc làm tăng tốc độ truyền.
+
++ Chạy liên tục: Trên máy tính khi ổ cứng bị lỗi thì hệ điều hành sẽ dừng lại. Tuy nhiên trong một mảng RAID, khi các ổ đĩa cứng bị lỗi các hệ thống tiếp tục hoạt động bình thường và ổ đĩa bị hỏng sẽ được thay thế (giả sử hệ thống hỗ trợ các ổ đĩa trao đổi nóng).
+## 3, Cách thức hoạt động
 Cách thức hoạt động của RAID là sao chép dữ liệu lên hai hoặc nhiều ổ cứng vật lý được liên kết với nhau bằng 1 RAID Controller. RAID Controller có thể dựa trên một trong 2 nền tảng phần cứng hoặc phần mềm.
 
-## 3, Kỹ thuật lưu trữ RAID
+## 4, Kỹ thuật lưu trữ RAID
 Các phương thức lưu trữ dữ liệu chính trong RAID là:
 * Striping (Phân chia dải): Tách luồng dữ liệu thành các khối có kích thước nhất định (được gọi là kích thước khối) sau đó viết từng khối này qua từng RAID. Cách lưu trữ dữ liệu này ảnh hưởng đến hiệu suất.
 * Mirroring (mirroring): Là một kỹ thuật lưu trữ trong đó các bản sao dữ liệu giống hệt nhau được lưu trữ trên các thành viên RAID cùng một lúc. Loại vị trí dữ liệu này ảnh hưởng đến khả năng chịu lỗi cũng như hiệu suất.
@@ -20,18 +36,18 @@ Các phương thức lưu trữ dữ liệu chính trong RAID là:
 
 Tất cả các loại RAID hiện có đều dựa trên phân dải, mirroring, chẵn lẻ. Hoặc kết hợp các kỹ thuật lưu trữ này.
 
-## 4, Điều kiện để cấu hình RAID
+## 5, Điều kiện để cấu hình RAID
 * RAID chỉ nên làm việc với các loại ổ cứng dung lượng bằng nhau.
 * Nếu khác sẽ lấy ổ có dung lượng thấp
 
-## 5, Cách tính dung lượng RAID
+## 6, Cách tính dung lượng RAID
 * RAID 0 bằng tổng dung lượng các ổ cộng lại.
 * RAID 1 chỉ duy trì dung lượng 1 ổ.
 * RAID 5 sẽ có dung lượng ít hơn 1 ổ (5 ổ dùng raid 5 sẽ có dung lượng 4 ổ).
 * RAID 6 sẽ có dung lượng ít hơn 2 ổ (5 ổ dùng raid 6 sẽ có dung lượng 3 ổ).
 * RAID 10 sẽ chỉ tạo được khi số ổ là chẵn, phải có tối thiểu từ 2 ổ trở lên. Dung lượng bằng tổng số ổ chia đôi (10 ổ thì dung lượng sử dụng là 5 ổ).
 
-## 6, Phân loại RAID
+## 7, Phân loại RAID
 ### RAID 0
 RAID 0 – dựa trên kỹ thuật striping. Mức RAID này không cung cấp khả năng chịu lỗi nhưng tăng hiệu năng hệ thống (tốc độ đọc và ghi cao). RAID 0 cần ít nhất 2 ổ đĩa (có thể sử dụng 1 ổ đĩa). Tổng quát ta có n đĩa (n>=2) và các đĩa là cùng loại. Dữ liệu sẽ được chia ra thành nhiều phần bằng nhau. Ví dụ có 2 ổ cứng 80GB thì hệ thống ổ đĩa sẽ là 160GB.
 
@@ -76,3 +92,20 @@ Trong trường hợp có 3 ổ cứng với dung lượng 500GB /ổ thì tổn
 * **Ưu điểm**: Các giao dịch dữ liệu đọc rất nhanh trong khi các giao dịch dữ liệu ghi có phần chậm hơn (do parity phải được tính toán). Nếu một drive bị lỗi, bạn vẫn có quyền truy cập vào tất cả dữ liệu. Ngay cả khi drive bị lỗi đang được thay thế và bộ điều khiển lưu trữ rebuild dữ liệu trên ổ đĩa mới.
 * **Nhược điểm**: Lỗi drive có ảnh hưởng đến thông lượng, mặc dù điều này vẫn có thể chấp nhận được. Đây là công nghệ phức tạp. Nếu một trong các đĩa trong mảng sử dụng đĩa 4TB bị lỗi và cần thay thế, việc khôi phục dữ liệu có thể mất một ngày hoặc lâu hơn. Việc này tùy thuộc vào load trên array và tốc độ của bộ điều khiển. Nếu một đĩa khác bị hỏng trong thời gian đó, dữ liệu sẽ bị mất vĩnh viễn.
 * **Đối tượng sử dụng**: Tất cả những website, dịch vụ, ứng dụng có số lượng truy cập và yêu cầu tài nguyên từ nhỏ đến vừa và lớn.
+
+## 8,Cách triển khai các loại RAID 
+Có hai cách để thực hiện các loại RAID: RAID phần mềm và RAID phần cứng.
+
+**RAID phần mềm**
+
+RAID phần mềm có thể thực hiện trong hệ điều hành và khá dễ thao tác, không cần thêm phần cứng và phần trung gian, giúp đạt hiệu quả hơn về mặt chi phí. 
+
+Các loại RAID này mảng cũng có thể được cấu hình lại vì chúng không bị hạn chế bởi bộ điều khiển RAID phần cứng.
+
+Tuy nhiên nhược điểm của RAID phần mềm là chậm hơn RAID phần cứng. Ngoài ra việc thay thế đĩa cũng khá phức tạp hơn vì hệ thống phải ngừng sử dụng đĩa trước khi nó được thay thế. 
+
+**Các loại RAID phần cứng**
+
+Các loại RAID phần cứng dùng bộ điều khiển phần cứng chuyên dụng mà các đĩa được liên kết. Bộ xử lý trên bo mạch quản lý RAID giúp giảm tải công việc từ bộ xử lý máy chủ, giúp đọc và ghi dữ liệu nhanh hơn. 
+
+Bộ điều khiển phần cứng cung cấp thêm bộ pin dự phòng bảo vệ dữ liệu của bạn trong trường hợp mất điện của máy chủ. Bên cạnh đó, bạn chỉ cần kéo nó ra và chèn một cái mới khi muốn thay đĩa. 
