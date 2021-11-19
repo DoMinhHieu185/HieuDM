@@ -104,6 +104,25 @@ Các loại RAID này mảng cũng có thể được cấu hình lại vì chú
 
 Tuy nhiên nhược điểm của RAID phần mềm là chậm hơn RAID phần cứng. Ngoài ra việc thay thế đĩa cũng khá phức tạp hơn vì hệ thống phải ngừng sử dụng đĩa trước khi nó được thay thế. 
 
+**Cấu hình Raid trên Centos 7**
+Bước 1: Cài đặt mdadm
+```
+# yum install mdadm -y
+```
+bước 2: Tạo Raid
+```
+# mdadm --create /dev/md0 --level=1 --raid-devices=2 /dev/sdc1 /dev/sdd1
+```
+
+* Trong đó --level= ta có thể thay đổi để tạo các Raid khác
+  * =0 : RAID 0
+  * =1 : RAID 1
+  * =5 : RAID 5
+
+Bước 3: Kiểm tra trạng thái RAID
+```
+# mdadm --detail /dev/md0
+```
 **Các loại RAID phần cứng**
 
 Các loại RAID phần cứng dùng bộ điều khiển phần cứng chuyên dụng mà các đĩa được liên kết. Bộ xử lý trên bo mạch quản lý RAID giúp giảm tải công việc từ bộ xử lý máy chủ, giúp đọc và ghi dữ liệu nhanh hơn. 
