@@ -81,7 +81,7 @@ Phương pháp này sử dụng phân chia “parity” (chẵn lẻ) để duy 
 
 Sau đây là một ví dụ cho thấy dữ liệu được ghi vào RAID 5 như thế nào. Mỗi dòng trong biểu đồ biểu diễn một khối dữ liệu và mỗi cột biểu diễn một ổ cứng khác nhau. Những số trong bảng đại diện cho các khối dữ liệu. Các số giống nhau biểu thị một khối dữ liệu được lặp lại. “P” là các bit “parity” cho hai khối dữ liệu
 
-![](/Linux/image/raid5.png)
+![](/Linux/image/raid6.png)
 
 Các bit “parity” luân chuyển giữa các ổ cứng sẽ làm tăng hiệu xuất và độ tin cậy cho dữ liệu. Dải ổ cứng vẫn sẽ tăng hiệu xuất thông qua một ổ riêng lẻ bởi vì nhiều ổ thì khả năng ghi dữ liệu sẽ nhanh hơn một ổ. Dữ liệu cũng được dự phòng toàn bộ nhờ các bit “parity”. Trường hợp ổ 2 bị lỗi thì dữ liệu có thể được phục hồi dựa trên dữ liệu và các bit trên hai ổ còn lại. Dung lượng dữ liệu giảm là do các khối dữ liệu chẵn lẻ. Trong thực tế nếu n là số lượng ổ và z là dung lượng thì ta có công thức sau:
 ```
