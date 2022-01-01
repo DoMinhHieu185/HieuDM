@@ -13,7 +13,7 @@ wget https://raw.githubusercontent.com/DoMinhHieu185/HieuDM/master/Script/wordpr
 ### Bước 2: Cấp quyền thực thi cho script
 Thực hiện lệnh
 ```
-chmod +x createfile.sh
+chmod +x configwp.sh
 ```
 
 ### Bước 3: Chạy script
@@ -34,12 +34,7 @@ Nhap MatiaDB host: (Enter for localhost):
 ```
 
 ### Bước 5: Kết quả
+Vào trình duyệt Web và điều hướng đến địa chỉ ip của Web server "http://(server's hostname or IP address)/wordpress/"
 
-````
-SHELL=/bin/bash
-PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin
+![](/Linux/image/wp4.png)
 
-# Backup du lieu
-30 * * * * /root/backup.sh
-
-```
