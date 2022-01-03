@@ -1,4 +1,4 @@
-# [Bash Shell] Viết chương trình gửi tin nhắn tới Telegram
+# Viết chương trình gửi tin nhắn backup thành công tới Telegram
 
 ## 1. Tạo bot Telegram
 
@@ -78,3 +78,18 @@ Chạy script:
 ```
 bash message.sh
 ```
+
+## 6. Thiết lập Crontab để tự động backup hàng ngày
+Thực hiện lệnh
+```
+crontab -e
+```
+Thêm dòng sau vào cuối cùng của file và lưu lại:
+```
+SHELL=/bin/bash
+PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:/opt/rh/rh-mariadb103/root/usr/bin/mysqldump
+
+# Backup du lieu
+30 * * * * /root/backup.sh
+```
+Crontab sẽ thực hiện 30p backup DB 1 lần
