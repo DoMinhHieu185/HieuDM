@@ -53,7 +53,25 @@ So sánh với cùng lệnh này ở máy master.
   > Nhật ký nhị phân được lưu trữ ở định dạng nhị phân, không phải văn bản thuần túy, và do đó không thể xem được bằng trình chỉnh sửa thông thường
 
 ### IV, Cấu hình Mariadb Replication
-#### 4.1, Cấu hình trên Master
+#### 4.1 Cài đặt MariaDB 5.5
+```
+[root@localhost ~]# yum install mariadb-server
+```
+* Cấu hình theo chuẩn utf8
+```
+[root@localhost ~]# vi /etc/my.cnf
+[mysqld]
+character-set-server=utf8
+```
+![](/Linux/image/db1.png)
+
+* Khởi động dịch vụ
+```
+[root@localhost ~]#  systemctl start mariadb
+[root@localhost ~]# systemctl enable mariadb
+Created symlink from /etc/systemd/system/multi-user.target.wants/mariadb.service to /usr/lib/systemd/system/mariadb.service.
+```
+#### 4.2, Cấu hình trên Master
 * Cấu hình firewall, cho phép lắng nghe port 3306
 ```
 firewall-cmd --add-port=3306/tcp --zone=public --permanent
@@ -128,7 +146,7 @@ masterdatabase.sql
 show master status;
 ```
 
-#### 4.2, Cấu hình trên Slave1
+#### 4.3, Cấu hình trên Slave1
 * Cấu hình firewall, cho phép lắng nghe port 3306.
 ```
 firewall-cmd --add-port=3306/tcp --zone=public --permanent
