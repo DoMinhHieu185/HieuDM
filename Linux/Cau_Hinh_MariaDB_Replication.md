@@ -53,56 +53,123 @@ So sánh với cùng lệnh này ở máy master.
   > Nhật ký nhị phân được lưu trữ ở định dạng nhị phân, không phải văn bản thuần túy, và do đó không thể xem được bằng trình chỉnh sửa thông thường
 
 ### IV, Cấu hình Mariadb Replication
-#### 4.1, Thêm Kho lưu trữ bộ sưu tập phần mềm CentOS SCLo.
+#### 4.1, Cấu hình trên Master
+* Cấu hình firewall, cho phép lắng nghe port 3306
 ```
-yum -y install centos-release-scl-rh centos-release-scl
+firewall-cmd --add-port=3306/tcp --zone=public --permanent
 ```
-#### 4.2, Cài đặt MariaDb từ SCLo
+* Reload xác nhận cấu hình.
 ```
-yum --enablerepo=centos-sclo-rh -y install rh-mariadb103-mariadb-server
-```
-#### 4.3, Tải biến môi trường
-```
-scl enable rh-mariadb103 bash
-```
-* Xem phiên bản MariaDB
-```
-mysql -V
-```
-#### 4.4, Bật MariaDB 10.3 tự động mỗi khi khởi động hệ thống
-```
-vi /etc/profile.d/rh-mariadb103.sh
-```
-* Tạo mới và thêm 2 dong sau vào file
-```
-source /opt/rh/rh-mariadb103/enable
-export X_SCLS="`scl enable rh-mariadb103 'echo $X_SCLS'`"
-```
-
-#### 4.5, Bật MariaDB 10.3 và định cấu hình cài đặt ban đầu.
-* Cấu hình theo chuẩn utf8
-```
-vi /etc/opt/rh/rh-mariadb103/my.cnf.d/mariadb-server.cnf
-```
-Tại phần [mysql] thêm
-```
-[mysqld]
-character-set-server = utf8
-```
-
-* Khởi động dịch vụ
-```
- systemctl start rh-mariadb103-mariadb
- systemctl enable rh-mariadb103-mariadb
-```
-* Cấu hình bảo mật
-```
-mysql_secure_installation
-```
-  > Cấu hình bảo mật giống phiên bản 5.5
-
-#### 4.6, Cấu hình tường lửa
-```
-firewall-cmd --add-service=mysql --permanent
 firewall-cmd --reload
+```
+* Chỉnh sửa file /etc/my.cnf
+```
+vi /etc/my.cnf
+```
+* Trong phần [mariadb] thêm các dòng sau:
+```
+ [mariadb]
+  server-id=1
+  log-bin=master
+  binlog-format=row
+  binlog-do-db=replica_db
+```
+* Trong đó :
+  * server_id là tùy chọn được sử dụng trong replication cho phép master server và slave server có thể nhận dạng lẫn nhau. Server_id Với mỗi server là khác nhau, nhận giá trị từ 1 đến 4294967295(mariadb >=10.2.2) và 0 đến 4294967295(mariadb =<10.2.1)
+  * log-bin hay log-basename là tên cơ sở nhật ký nhị phân để tạo tên tệp nhật ký nhị phân. binlog-format là định dạng dữ liệu được lưu trong file bin log.
+  * binlog-do-db là tùy chọn để nhận biết cơ sở dữ liệu nào sẽ được replication. Nếu muốn replication nhiều CSDL, bạn phải viết lại tùy chọn binlog-do-db nhiều lần. Hiện tại không có option cho phép chọn toàn bộ CSDL để replica mà bạn phải ghi tất cả CSDL muốn replica ra theo option này.
+* Restart lại dịch vụ mariadb để nhận cấu hình mới.
+```
+systemctl restart mariadb
+```
+* Sử dụng root user đăng nhập vào MariaDB.
+```
+mysql -u root -p
+```
+* Tạo CSDL có tên là db-replicate
+```
+create database db_replicate;
+```
+* Tạo Slave user, password và gán quyền cho user đó. Ví dụ sử dụng username là hieu và password là admin@123.
+```
+> create user 'hieu'@'%' identified by 'admin@123';
+> stop slave;
+Query OK, 0 rows affected, 1 warning (0.062 sec)
+> GRANT REPLICATION SLAVE ON *.* TO 'slave_user'@'%' IDENTIFIED BY 'admin@123';
+Query OK, 0 rows affected (0.061 sec)
+```
+* Xác nhận lại các thay đổi với câu lệnh:
+```
+FLUSH PRIVILEGES;
+```
+* Sử dụng câu lệnh dưới đây để chắc chắn rằng không có bất cứ điều gì được ghi vào master database trong quá trình replication dữ liệu. Ghi nhớ filename and position của binary log để có thể thực hiện cấu hình trên slave.
+```
+FLUSH TABLES WITH READ LOCK;
+```
+* Tiến hành backup CSDL trên master server và chuyển nó đến slave server.
+```
+mysqldump --all-databases --user=root --password --master-data > masterdatabase.sql
+Enter password:
+ls
+masterdatabase.sql
+```
+* Đăng nhập vào MariaDB với root user và thực hiện unlock table bằng lệnh:
+```
+UNLOCK TABLES;
+```
+* Copy masterdatabase.sql file tới Slave server 1.
+```
+scp masterdatabase.sql root@10.10.22.101:/root/masterdatabase.sql
+ls
+masterdatabase.sql
+```
+* Sử dụng câu lệnh dưới để kiểm tra trạng thái của master.
+```
+show master status;
+```
+
+#### 4.2, Cấu hình trên Slave1
+* Cấu hình firewall, cho phép lắng nghe port 3306.
+```
+firewall-cmd --add-port=3306/tcp --zone=public --permanent
+```
+* Reload xác nhận lại cấu hình.
+```
+firewall-cmd --reload
+```
+* Chỉnh sửa /etc/my.cnf .
+```
+vi /etc/my.cnf
+```
+Sau đó thêm vào các dòng sau:
+```
+[mariadb]
+server-id = 2
+replicate-do-db=replica_db
+```
+* Import CSDL master. Enter password của root user trong Mariadb.
+```
+mysql -u root -p < /root/masterdatabase.sql
+  
+Enter password:
+```
+* Restart MariaDB service để tiếp nhận thay đổi.
+```
+systemctl restart mariadb
+```
+* Sử dụng root user đăng nhập vào MariaDB Server.
+```
+mysql -u root -p
+```
+* Hướng dẫn Slave tìm file Master Log file và Start Slave.
+```
+> STOP SLAVE;
+> CHANGE MASTER TO MASTER_HOST='10.10.22.100', MASTER_USER='slave_user', MASTER_PASSWORD='abc@123', MASTER_LOG_FILE='master.000001', MASTER_LOG_POS=939;
+Query OK, 0 rows affected (0.051 sec)
+> START SLAVE;
+Query OK, 0 rows affected (0.044 sec)
+```
+* Kiểm tra trạng thái của Slave, sử dụng lệnh:
+```
+show slave status\G;
 ```
