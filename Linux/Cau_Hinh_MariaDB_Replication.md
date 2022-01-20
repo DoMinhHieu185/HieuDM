@@ -53,3 +53,56 @@ So sánh với cùng lệnh này ở máy master.
   > Nhật ký nhị phân được lưu trữ ở định dạng nhị phân, không phải văn bản thuần túy, và do đó không thể xem được bằng trình chỉnh sửa thông thường
 
 ### IV, Cấu hình Mariadb Replication
+#### 4.1, Thêm Kho lưu trữ bộ sưu tập phần mềm CentOS SCLo.
+```
+yum -y install centos-release-scl-rh centos-release-scl
+```
+#### 4.2, Cài đặt MariaDb từ SCLo
+```
+yum --enablerepo=centos-sclo-rh -y install rh-mariadb103-mariadb-server
+```
+#### 4.3, Tải biến môi trường
+```
+scl enable rh-mariadb103 bash
+```
+* Xem phiên bản MariaDB
+```
+mysql -V
+```
+#### 4.4, Bật MariaDB 10.3 tự động mỗi khi khởi động hệ thống
+```
+vi /etc/profile.d/rh-mariadb103.sh
+```
+* Tạo mới và thêm 2 dong sau vào file
+```
+source /opt/rh/rh-mariadb103/enable
+export X_SCLS="`scl enable rh-mariadb103 'echo $X_SCLS'`"
+```
+
+#### 4.5, Bật MariaDB 10.3 và định cấu hình cài đặt ban đầu.
+* Cấu hình theo chuẩn utf8
+```
+vi /etc/opt/rh/rh-mariadb103/my.cnf.d/mariadb-server.cnf
+```
+Tại phần [mysql] thêm
+```
+[mysqld]
+character-set-server = utf8
+```
+
+* Khởi động dịch vụ
+```
+ systemctl start rh-mariadb103-mariadb
+ systemctl enable rh-mariadb103-mariadb
+```
+* Cấu hình bảo mật
+```
+mysql_secure_installation
+```
+  > Cấu hình bảo mật giống phiên bản 5.5
+
+#### 4.6, Cấu hình tường lửa
+```
+firewall-cmd --add-service=mysql --permanent
+firewall-cmd --reload
+```
