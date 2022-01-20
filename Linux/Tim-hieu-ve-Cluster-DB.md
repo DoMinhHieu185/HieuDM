@@ -1,4 +1,14 @@
-# Tìm hiểu về MariaDB Cluster
+# Tìm hiểu về MariaDB Galera Cluster
+- [I, Tổng quan về Cluster](#I-tổng-quan-về-Cluster)
+  - [1.1, Cluster là gì](#1.1-Cluster-là-gì)
+  - [1.2, Tính chất quan trọng](#1.2-Tính-chất-quan-trọng)
+  - [1.3, Các thật ngữ quan trọng](#1.3-Các-thuật-ngữ-quan-trọng)
+  - [1.4, Các chế độ hoạt động](#1.4-Các-chế-độ-hoạt-động)
+- [II, Tìm hiểu về MariaDB Galera Cluster](#II-Tìm-hiểu-về-MariaDB-Galera-Cluster)
+  - [2.1, MariaDB Galera là gì](#2.1-MariaDB-Galera-là-gì)
+  - [2.2, Đặc trưng](#2.2-Đặc-trưng)
+  - [2.3, Lợi ích](#2.3-Lợi-ích)
+  - [2.4, Hướng dẫn cài đặt MariaDB Galera Cluster](#2.4-Hướng-dẫn-cài-đặt-MariaDB-Galera-Cluster)
 ### I, Tổng quan về Cluster
 #### 1.1, Cluster là gì
 Cluster là kiến trúc nâng cao khả năng sẵn sàng cho các hệ thống dịch vụ. Hệ thống Cluster cho phép nhiều máy chủ chạy kết hợp, đồng bộ với nhau. Hệ thống Cluster nâng cao khả năng chịu lỗi của hệ thống, tăng cấp độ tin cậy, tăng tính đảm bảo, nâng cao khả năng mở rộng cho hệ thống. Trong trường hợp có lỗi xảy ra, các dịch vụ bên trong Cluster sẽ tự động loại trừ lỗi, cố gắng khôi phục, duy trì tính ổn định, tính sẵn sàng của dịch vụ
@@ -50,12 +60,17 @@ MariaDB Galera Cluster là giải pháp sao chép đồng bộ nâng cao tính s
 * Nhân rộng song song, với kiểu row level
 * Kết nối máy khách trực tiếp, giao diện MariaDB bản địa
 
-#### 2.2, Lợi ích
+#### 2.3, Lợi ích
 * Không có độ trễ slave
 * Không có transactions bị mất
 * Đáp ứng cả 2 khẳng năng là mở rộng và read & write
 * Độ trễ client nhỏ hơn
 
+**Các port mạng cần mở trên cụm**
+* Standard MariaDB Port (default: 3306) Dành cho các kết nối  MySQL client.
+* Galera Replication Port (default: 4567) Dành cho traffic truy cập replication Galera,  sử dụng cả truyền tải UDP và TCP trên cổng này.
+* IST Port (default: 4568) Dành cho chuyển trạng thái tăng dần.
+* SST Port (default: 4444) Dành cho tất cả các phương thức State Snapshot Transfer .
 #### 2.4, Hướng dẫn cài đặt MariaDB Galera Cluster
 ##### 2.4.1, Chuẩn bị
 **Mô hình**
