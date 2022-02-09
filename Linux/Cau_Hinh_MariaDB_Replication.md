@@ -53,6 +53,8 @@ So sánh với cùng lệnh này ở máy master.
   > Nhật ký nhị phân được lưu trữ ở định dạng nhị phân, không phải văn bản thuần túy, và do đó không thể xem được bằng trình chỉnh sửa thông thường
 
 ### IV, Cấu hình Mariadb Replication
+**Mô hình**
+![](/Linux/image/replicate2.png)
 #### 4.1 Cài đặt MariaDB 5.5
 ```
 [root@localhost ~]# yum install mariadb-server
